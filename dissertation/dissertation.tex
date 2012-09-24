@@ -1,0 +1,143 @@
+\documentclass[12pt,pdftex,twoside,openright]{report}
+\usepackage{utthesis}
+\usepackage{float}
+\usepackage{layout}
+\usepackage[pdftex]{graphicx}
+\usepackage[
+square,
+numbers,
+comma,
+sort&compress
+]
+{natbib}
+\usepackage{alltt}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{tightlist}
+\newcommand{\tightlist}{\parskip=0pt \itemsep=1ex \topsep=0pt}
+%\usepackage[titles]{tocloft}
+\usepackage{diss}
+\input{ma_margin_notes.sty}
+%\input{notes.sty}
+\usepackage[
+pdftex,
+%backref,
+%pagebackref,
+bookmarks=true,
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+filecolor=black,
+pagecolor=blue,
+urlcolor=black,
+plainpages=false,
+pdfpagelabels,
+pdftitle={Adaptive Finite Element Simulation of Flow and Transport Applications on Parallel Computers},
+pdfauthor={Benjamin S. Kirk},
+pdfsubject={Ph.D. Dissertation},
+pdfkeywords={},
+]
+{hyperref}
+\usepackage[hang,tight,raggedright]{subfigure}
+\usepackage[tight]{units}
+\usepackage{times}
+ 
+
+\hyperbaseurl{file://}
+
+\author{Benjamin Shelton Kirk}    
+                              
+\address{301 Clear Creek Meadows Drive \\
+  League City, TX 77573}
+
+\graduationmonth{May}     
+\graduationyear{2007}      
+\title{Adaptive Finite Element Simulation of Flow and Transport Applications on Parallel Computers}
+
+\supervisor{Graham F.\ Carey}
+
+\committeemembers
+[Clint N.\ Dawson]
+[David S.\ Dolling]
+[Robert J.\ MacKinnon]
+[Hans M.\ Mark]
+{Philip L.\ Varghese}
+
+
+\previousdegrees{B.S., M.S.}
+
+\oneandonehalfspacing
+
+\setcounter{secnumdepth}{4}
+
+% Define an algorithm floating environment
+\floatstyle{ruled}
+\newfloat{algorithm}{thp}{loa}[chapter]
+\floatname{algorithm}{Algorithm}
+
+
+\begin{document}
+%\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+%\layout
+
+\copyrightpage                 
+\commcertpage                 
+\titlepage                     
+
+\begin{dedication}
+  \input{dedication}
+\end{dedication}
+
+\acknowledgments
+\input{acknowledgments}                       
+
+\utabstract
+\input{abstract}                       
+
+\singlespacing
+\tableofcontents
+\listoffigures
+\listoftables                        
+\listof{algorithm}{List of Algorithms}
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\oneandonehalfspacing
+                                    
+\include{chapters/introduction}         % Introduction
+\include{chapters/amr}                  % Adaptive Refinement
+\include{chapters/parallel}             % Parallel Issues & Data Structures
+%\include{chapters/nested_grids}         % Nested Grids
+%\include{chapters/monotonicity}         % Monotonicity
+\include{chapters/bio_transport}        % Applications - Biological Transport 
+%\include{chapters/incompressible_flows} % Applications - Incompressible Flow
+\include{chapters/compressible_flows}   % Applications - Compressible Flow
+\include{chapters/conclusions}          % Conclusions
+
+\appendix
+%\include{appendix/bio_transport}        % Convergence histories etc...
+\include{appendix/compressible}         % Compressible flow - Jacobians, etc... 
+
+%\nocite{*}
+%%\bibliographystyle{ieeetr}
+%%\bibliographystyle{unsrtnat}
+%%\bibliographystyle{elsart-num}
+%%\bibliographystyle{elsart-harv}
+%%\bibliographystyle{plain}
+\bibliographystyle{unsrt}
+\singlespacing
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{dissertation}
+\oneandonehalfspacing
+
+\begin{vita}             
+  \input{dissvita}
+\end{vita}               
+
+
+\end{document}
+
+%% Local Variables:
+%% TeX-master: "dissertation.tex"
+%% TeX-command-default: "Make"
+%% End:

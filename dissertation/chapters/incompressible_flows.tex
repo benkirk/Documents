@@ -1,0 +1,84 @@
+%% $Id: incompressible_flows.tex,v 1.4 2007/02/14 14:08:14 benkirk Exp $
+\chapter{Incompressible Flows\label{chap:incompressible}}
+
+\section{Introduction}
+This chapter presents results from the application of the previously discussed simulation techniques to problems of incompressible flow with transport.  These phsical phenomenon are described by the incompressible Navier Stokes equations coupled with a thermal transport equation.
+
+\section{Governing Equations}
+
+\subsection{Mathematical Model}
+The relevant equations for incompressible flows with thermal transport are the incompressible Navier-Stokes and energy equations:
+
+\begin{align}
+  \label{eq:pde_cont}
+  \dvg{\bv{u}} &= 0 \\
+  \label{eq:pde_ns}
+  \rho\left(\pdv{\bv{u}}{t} + \bv{u}\cdot\grad{\bv{u}}\right) &= \dvg{}\bt{\sigma} -\rho\beta\bv{g}(T-T_{ref}) \\
+  \label{eq:pde_energy}
+  \rho c_p \left(\pdv{T}{t} + \bv{u}\cdot\grad{T}\right) &= \dvg{(k\grad T)}
+\end{align}
+
+where, for a Newtonian fluid, the stress tensor $\bt{\sigma}$ is given by
+\begin{equation}
+  \label{eq:sigma1}
+  \bt{\sigma} = -p\bt{I} + \mu\left(\grad{\bv{u}} + \tgrad{\bv{u}}\right)
+\end{equation}
+
+
+Equation~\eqref{eq:pde_cont} enforces conservation of mass by requiring that the velocity field $\bv{u}$ be solenoidal.  Equation~\eqref{eq:pde_ns} is a statement of momentum conservation.  In this equation $\rho$ is the fluid density, $\bv{u}$ is the fluid velocity, $\bt{\sigma}$ is the stress tensor, and the final term on right-hand-side is the Boussinesq approximation for bouynacy.  Equation~\eqref{eq:pde_energy} enforces energy conservation in a fluid with a specific heat at constant pressure $c_p$ and a thermal conductivity $k$.  In this equation Fourier's law, which relates heat flux to temperature gradient $(q=-k\grad{T}$) has been employed.
+
+
+Using the definition of $\bt{\sigma}$ in Equation~\eqref{eq:pde_ns} yields
+\begin{equation}
+  \label{eq:pde_ns_newt1}
+  \rho\left(\pdv{\bv{u}}{t} + \bv{u}\cdot\grad{\bv{u}}\right) = -\grad{p} + \dvg{}\left(\mu\left(\grad{\bv{u}} + \tgrad{\bv{u}}\right)\right) -\rho\beta\bv{g}(T-T_{ref})
+\end{equation}
+
+Finally, for a constant viscosity $\mu$, Equation~\eqref{eq:pde_cont} may be used to simplify Equation~\eqref{eq:pde_ns_newt1}
+\begin{equation}
+  \label{eq:pde_ns_newt2}
+  \rho\left(\pdv{\bv{u}}{t} + \bv{u}\cdot\grad{\bv{u}}\right) = -\grad{p} + \mu \lap{\bv{u}} - \rho\beta\bv{g}(T-T_{ref})
+\end{equation}
+This form of the momentum equation has benefits for certain discretization strategies that will be discussed later.
+
+The Boussinesq approximation in Equation~\eqref{eq:pde_ns} couples the velocity and temperature fields~\cite{Bous-1903}. In the approximation the fluid density $\rho$ and the coefficient of thermal expansion $\beta$ act to produce a bouyant force wherever the fluid temperature differs from some reference temperature $T_{ref}$.  It is this approximation that simulates the effect of thermal-induced density variations in an otherwise incompressible fluid.  The sign of the term indicates that when the fluid temperature $T$ is greater than the reference temperature $T_{ref}$ the bouyant force will be opposed to the direction of gravity.  The Boussinesq approximation is valid for small temperature variations.
+
+The transport coefficients, $\mu$ and $k$, in general are functions of temperature and thus provide additional coupling between equations~\eqref{eq:pde_ns} and~\eqref{eq:pde_energy}.  However, for many fluids, these properties are relatively constant over a small temperature range and may be assumed constant.  
+
+\subsection{Finite Element Formulation}
+\subsubsection{Weak Formulation}
+The corresponding weak form of the governing equations~\eqref{eq:pde_cont}--\eqref{eq:pde_energy} is obtained by multiplying the equations a suitable test function and integrating over the domain $\Omega$. The resulting weak form of the governing equations is then:
+\\
+
+Find $(\bv{u}, p, T)$ which satisfy
+\begin{align}
+  \label{eq:cont_weak}
+  \int_\Omega q \left(\dvg{}\bv{u}\right) \dx &= 0 \\
+  \label{eq:ns_weak}
+  \int_\Omega \rho\left(
+    \frac{\partial \bv{u}}{\partial t} + \bv{u} \cdot \grad{}\bv{u}
+  \right) \cdot \bv{v} \dx & =
+  \int_\Omega (\dvg{}\bt{\sigma})\cdot\bv{v}
+  - \rho \beta \bv{g}(T-T_{ref})\cdot\bv{v} \dx \\
+  \label{eq:energy_weak}
+  \int_\Omega \rho c_p \left(
+    \frac{\partial T}{\partial t} + \bv{u} \cdot \grad{T}
+  \right) w \dx &=
+  \int_\Omega \left(\dvg{} \left(k \grad{T}\right)\right) w \dx
+\end{align}
+for all $(\bv{v}, q, w)$ in an admissible function space~\textbf{DEFINE FUNCTION SPACE}.
+
+After performing integration by parts on the diffusive terms equations~\eqref{eq:ns_weak}--\eqref{eq:energy_weak} 
+  
+\subsubsection{Discretization}
+The domain $\Omega$ is partitioned into a collection of discrete finite elements $\Omega_i$ such that $\Omega=\cup \Omega_i$.  
+
+\subsubsection{Solution Algorithm}
+
+\section{Natural Convection}
+This section considers the problem of natural convection in various geometries. 
+
+
+%% Local Variables:
+%% TeX-master: "dissertation.tex"
+%% End:

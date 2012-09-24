@@ -1,0 +1,40 @@
+\begin{thebibliography}{99}
+
+\bibitem{fins_aiaa10}
+Benjamin S.~Kirk, Graham F. Carey, {Validation Studies of Fully-Implicit, Parallel Finite Element Simulations of Laminar Hypersonic Flows} {\em AIAA Journal}, 48(6):1025--1036, June 2010.
+
+\bibitem{adiabaticSC10}
+Benjamin S.~Kirk, \href{http://dx.doi.org/10.1002/fld.2195} {Adiabatic Shock Capturing in Perfect Gas Hypersonic Flows.} {\em International Journal for Numerical Methods in Fluids}, 64(9):1041-1062, November 2010.
+
+\bibitem{wterror09}
+Benjamin S.~Kirk. {A Multidimensional Thermal Analysis to Assess Modeling Error in High-Speed Wind Tunnel Heat Transfer Data Reduction Schemes.} {\em AIAA Journal of Thermophysics and Heat Transfer}, 23(1):186--191, January 2009.
+
+\bibitem{ctwatch08}
+Kirk, B. S., Palmer, G., Tang, C., Wood, W. A. ``Urgent Computing in Support of Space Shuttle Orbiter Reentry,'' {\em CTWatch Quarterly}, Volume 4, Number 1, March 2008. \url{http://www.ctwatch.org/quarterly/articles/2008/03/urgent-computing-in-support-of-space-shuttle-orbiter-reentry}
+/
+\bibitem{fins_ijnmf}
+Benjamin S. Kirk, Graham F. Carey, \href{http://dx.doi.org/10.1002/fld.1635}{Development and Validation of a SUPG Finite Element Scheme for the Compressible Navier-Stokes Equations using a Modified Inviscid Flux Discretization}. {\em International Journal for Numerical Methods in Fluids}, 57(3):265--293, May 2008.
+
+\bibitem{benkirk_dissertation}
+Benjamin~S. Kirk, \href{http://cfdlab.ae.utexas.edu/~benkirk/dissertation.pdf}{\emph{Adaptive Finite Element Simulation of Flow and Transport Applications on Parallel Computers}}. PhD thesis, The University of Texas at Austin, May 2007.
+
+\bibitem{libMeshPaper}
+Benjamin~S. Kirk, John~W. Peterson, Roy~H. Stogner, and Graham~F. Carey. {{\tt libMesh:} A C++ Library for Parallel Adaptive Mesh Refinement/Coarsening Simulations}. {\em Engineering with Computers}, 22(3):237--254, 2006.
+
+\bibitem{tmj06}
+William S.~Kirk and Benjamin S.~Kirk, A Biomechanical Basis for Primary Arthroplasty of the Temporomandibular Joint. {\em Oral and Maxillofacial Surgery Clinics of North America}, 18(3):345--368, 2006.
+
+\bibitem{jsr06}
+Jeremiah J. Marichalar, William C. Rochelle, Benjamin S. Kirk, and Charles H. Campbell, {Boundary Layer/Streamline Surface Catalytic Heating Predictions on Space Shuttle Orbiter}. {\em Journal of Spacecraft and Rockets}, 43(6):1202--1215, 2006.
+
+\bibitem{modelling_error}
+{G.~F.} Carey, W.~Barth, J.~A. Woods, B.~S. Kirk, M.~L. Anderson, S.~Chow, and W.~Bangerth. {Modelling error and constitutive relations in simulation of flow and transport}. {\em International Journal for Numerical Methods in Fluids}, 46:1211--1236, 2004.
+
+\bibitem{carey_bail_2004}
+G.~F. Carey, M.~Anderson, B.~Carnes, and B.~Kirk. {Some aspects of adaptive grid technology related to boundary and interior layers}. {\em J. Comput. Appl. Math.}, 166(1):55--86, 2004.
+
+\bibitem{kirk_lipnikov_cmg}
+B.~Kirk, K.~Lipnikov, and G.~F. Carey. {Nested Grid Iteration for Incompressible Viscous Flow and Transport}. {\em International Journal of Computational Fluid Dynamics}, 17(4):253--262, August 2003.
+
+
+\end{thebibliography}

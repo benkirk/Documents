@@ -1,0 +1,65 @@
+% Needed to be able to remove notes from the text
+\usepackage{verbatim}
+
+% If you set \DoNotefalse then no notes will appear in the text.
+% However the location of notes will still be marked.
+%
+\newif\ifDoNotes
+\DoNotestrue
+
+% Some trickery to get marginpar to work in script size
+\let\oldmarginpar\marginpar
+\renewcommand{\marginpar}[1]{\oldmarginpar{\raggedright\scriptsize #1}}
+
+% We need to save this and use it inside notes, as 
+% we want indentation inside notes.
+% The actual saving is done inside the PersonalNote command
+\newlength{\oldparindent}
+
+% Commands for generating personal notes notes
+% #1 : Username
+% #2 : Counter to use
+% #3 : Note Text
+\ifDoNotes
+  \newcommand{\MarginNote}[3]{%
+    \marginpar{{\bf #1 \stepcounter{#2}\csname the\string#2\endcsname:} #3}%
+  }
+\else
+  \newcommand{\MarginNote}[3]{%
+    \marginpar{{\bf #1 \stepcounter{#2}\csname the\string#2\endcsname}}%
+  }
+\fi
+
+% Places a user specific mark into the text as well as placing a 
+% marginpar note.
+% #1 : Name
+% #2 : Counter
+% #3 : Note Text
+% #4 : User Symbol
+\newcommand{\PersonalMargin}[4]{%
+  \MarginNote{#1}{#2}{#3}${}^\textsf{#4\csname the\string#2\endcsname}$%
+}
+
+% Generates a named and numbered intext note with margin note
+% #1 : Name
+% #2 : Counter
+% #3 : Symbol
+\ifDoNotes
+  \newenvironment{PersonalNote}[3]{%
+    %\addtocounter{#2}{1}%
+    \setlength{\oldparindent}{\parindent}%
+    \begin{center}%
+       \MarginNote{#1}{#2}{In Text}%{#3}%
+       \begin{minipage}{0.9\textwidth}{\sc #1 \csname the\string#2\endcsname:}%
+       \begingroup\small%
+       \parindent=\oldparindent%
+   }{%
+   \endgroup%
+   \end{minipage}\end{center}%
+  }
+\else
+   % This should never be used as we need to overload it in the 
+   % user section when DoNotes is false.
+   \newenvironment{PersonalNote}{PNOTE:\tiny}{END PNOTE}
+\fi
+

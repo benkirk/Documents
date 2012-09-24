@@ -1,0 +1,137 @@
+\documentclass[12pt,pdftex]{article}
+\usepackage{doublespace}
+
+\topmargin -2.0cm
+\oddsidemargin 0in
+\evensidemargin 0in
+%\footheight 0.0pt
+\headheight 2\baselineskip
+\textwidth 6.0in
+\textheight 9.0in
+
+
+
+\begin{document}
+\begin{spacing}{1.5}
+
+  
+\section{Introduction}
+I have done little to the introduction beyond what you included in an
+email you sent me a while back.  The major goal is to motivate the
+work by describing some of the difficulties that arise in CFD:
+\begin{itemize}
+  \item monotonicity
+  \item oscillations
+  \item stabilization
+  \item accuracy
+  \item reliability
+\end{itemize}
+
+The importance of these properties is described.  The contributions of
+the work are listed as:
+\begin{enumerate}
+  \item[] \textbf{Major Contributions:}
+    
+  \item monotonicity properties for convection-reaction-diffusion
+  discretizations
+  
+  \item nested grid approaches
+    
+  \item subgrid strategies for solution enhancement and stabilization
+    
+  \item applications and phenomenological studies
+
+  \item[] \textbf{Other Contributions:}
+    
+  \item adaptive refinement research
+    
+  \item parallel data structures and related issues
+\end{enumerate}
+
+
+\section{Monotonicity}
+\subsection{Limiter approaches}
+Describe the 1D and 2D flux-limiter approach devised by MacKinnon and
+Carey.  Emphasize the extension to 2D and the resulting numerical
+experiments.  (Material in this chapter will be drawn heavily from the
+in-progress 2D paper.)  We are working on the 2D paper right now, and
+I want to re-format the results.  Right now it is information-overload.
+
+\subsection{Multiplier approaches}
+(Is this worth exploring in more detail?) Describe the theory and
+numerical experiments from the SIAM Geosciences work when a Lagrange
+multiplier is used to help enforce positivity.  Incorporate some of
+Wolfgang's improvements into the existing framework.
+
+\section{Nested Grids}
+\subsection{Uniform meshes}
+Brief overview of CMG theory and examples from the Lipnikov paper.
+Repeat those examples in 2D and 3D with other linear solvers used as
+the smoother.
+
+\subsection{Adaptive meshes}
+Applications of non-uniform nested refinement to steady applications.
+The approach here is to take a steady-state (or time-step to steady
+state) on a coarse mesh, uniformly refine, selectively coarsen,
+repeat...  I have done preliminary work here in 2D with a low Rayleigh
+number natural convection test case with promising results.  More work
+is needed to help determine optimal coarsening fractions, etc...  This
+approach could easily be applied to some of the large-scale 3D
+problems in the RBM application.
+
+
+\section{Subgrid Strategies}
+The work here is still in the early stages.  The framework is there
+for windowing regions of a problem and either re-solving the entire
+problem with a refined window or just solving on the refined window
+with polluted boundary data.
+
+Initial results suggest that the coarse-fine interface has significant
+error (even in the case of re-solving the entire problem) but the
+features (gradients, etc...) of the windowed solution are
+significantly better.  At this point I have only applied this to a
+simple Poisson problem.  The next test case will be a
+convection-dominated problem with a strong boundary layer.
+
+\section{Adaptive Refinement}
+(I am not sure about the positioning of this section.  Maybe it should
+come after the monotonicity work \& precede the Nested Grids stuff
+since that uses adaptive meshes.)
+
+This chapter describes (briefly) the benefits of adaptive meshes.  It
+then describes the general approach:  coarse solution, error
+estimation, mesh refinement, solution projection/restriction, repeat.
+The approach for transient applications will also be discussed.
+
+Difficulties such as hanging nodes and hybrid 3D meshes will be
+described.  libMesh will briefly be described as a novel contribution.
+
+\section{Parallel Issues \& Data Structures}
+The need for parallel computers will be briefly described since it is
+widely accepted.  The emphasis will be on the difficulties encountered
+when the adaptive approaches used in the present work are applied to
+parallel machines and new approaches to handling these difficulties.
+The parallel data structures that are used to enable efficient AMR on
+parallel machines will be discussed.
+
+\section{Applications \& Phenomenological Studies}
+
+\subsection{AMR for the Elder Problem}
+Extend the work that went into the Japan paper. We had some open
+questions about the quality of the adaptive mesh.  I do think it will
+be worth presenting the Elder problem due to its unique sensitivity
+and necessity of proper mesh resolution.
+
+\subsection{Incompressible Flow \& Transport}
+I have done a lot of work on natural convection in various
+geometries.  There is also some RBM work that I have done along with
+John.  I am not sure what (if anything) from this should be presented.
+
+\subsection{Compressible Flows}
+Perhaps discuss the application area with the committee?
+
+
+\section{Conclusions}
+  
+\end{spacing}
+\end{document}

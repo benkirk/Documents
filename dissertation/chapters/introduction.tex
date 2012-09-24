@@ -1,0 +1,90 @@
+%% $Id: introduction.tex,v 1.22 2007/03/24 23:22:24 benkirk Exp $
+\chapter{Introduction\label{chap:intro}}
+
+Many physical processes of interest in engineering exhibit phenomena over a range of scales.  Such multiscale behavior can result from complex interactions in reaction--diffusion systems, through the interplay of convection and diffusion in transport applications, or from other sources.  The primary objective of this work is to investigate and advance adaptive finite element techniques and supporting software infrastructure for  solving this class of problems, particularly on parallel computers, and to conduct basic science studies of complex fine-scale interaction using the simulation capability developed here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivation}
+Multiscale physical processes are particularly challenging for efficient, reliable  computational simulation using traditional mesh-based approaches.  For such processes, the spatial resolution required for accurate simulation is intimately tied to the intricacies of the solution at hand, and hence a suitable mesh for an application is dependent upon the (generally unknown) details of the solution.  Physical intuition has been the norm in practice for constructing a mesh a priori.  This is the approach typically used to resolve boundary layer flows in steady external aerodynamic applications, for example.  For the general case in which the location and structure of key features are not known until the approximate solution is obtained a reliable and near-optimal mesh for a given problem cannot be generated a priori.  A user-in-the-loop approach to this problem leaves the analyst in the unenviable position of making decisions based on a mesh that may not provide adequate resolution and therefore yields erroneous results.
+
+By contrast, adaptive techniques essentially obtain for the solution and the near-optimal mesh simultaneously.  This approach removes inefficient manual mesh improvement/solution loop with an automated feedback control approach.  In addition to providing an optimal mesh targeting the particular features of interest in a given problem (and thus minimizing computational resources required), adaptive techniques also provide a robust mechanism for efficient error control and faster, more stable solution algorithms.
+
+It is now well accepted that adaptive techniques generally produce more robust and accurate simulation results.  Still, while such techniques are often used in the research setting, their adoption for practical engineering computations is still not widespread.  This is in no small part due to the difficulty posed by efficiently implementing these techniques, especially on modern high-performance parallel computing architectures.
+
+Parallel computing platforms pose a particular challenge for efficient adaptive simulations and the necessary enabling software technology.  The dynamic nature of adaptive schemes produce complications for domain decomposition strategies on parallel machines that have historically limited their application.  A flexible, object-oriented software framework for adaptive finite element simulations on parallel machine was developed during the course of this work to address these difficulties.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Overview}
+Chapter~\ref{chap:amr} presents an overview of adaptive mesh refinement including the motivation and  a historical perspective.  This chapter introduces a number of concepts which will be recurring themes in subsequent application studies.  Data structure requirements will be considered and a particular choice will be presented in detail.  Finally, detailed aspects of AMR such as refinement strategies and error indicators will be discussed.
+
+Chapter~\ref{chap:parallel} discusses particular challenges which arise when adaptive methods are implemented on parallel computers.  This chapter deals with some of the software engineering and design choices which must be made when implementing this class of methods.  These issues are addressed and the specific design and implementation employed in the \libMesh{} finite element library is presented in detail. Of particular interest are new contributions to AMR in the context of parallel, high-performance computing, including novel work on data structures, treatment of constraints in a parallel setting, generality and extensibility via object-oriented programming, and the design/implementation of a flexible software framework.  This framework is then applied in the specific study of fine scale interaction such as those in biological chemotaxis (Chapter~\ref{chap:bio}) and high-speed shock physics for compressible flows (Chapter~\ref{chap:compressible}).
+
+%Chapter~\ref{chap:nested_grids} presents introduces hierarchically refined meshes and associated solution algorithms as a precursor to local mesh refinement.  In this chapter the cascadic multigrid algorithm is discussed and numerical experiments are presented which apply the method to non self-adjoint operators in the context of incompressible flows.  Central to the method is the concept of a coarse mesh solution providing the initial iterate for a fine mesh solution.  This concept will be used repeatedly in application studies in the concept of adaptive mesh refinement. 
+
+Chapter~\ref{chap:bio} considers chemotactic transport processes arising in biological systems such as \emph{Escherichia coli} colonies to illustrate the flexibility of the framework for different physics classes and to explore adaptivity for chemotaxis for the first time.  Such systems exhibit evolution on multiple time and spatial scales and require adaptive schemes for efficient simulation. A nonlinear reaction-diffusion model for this problem class is presented and a corresponding finite element formulation is developed.  
+
+In Chapter~\ref{chap:compressible} the adaptive techniques are applied to a range of problems arising in compressible flows.  For such flows the multiscale resolution capabilities of adaptive meshes are particularly well--suited to resolving localized features such as shock waves and boundary layers.  In this chapter a finite element formulation for the compressible Navier--Stokes equations is presented and a number of application studies are performed.
+
+Finally, Chapter~\ref{chap:conclusions} summarizes the work performed and discusses open issues which should be considered as future work.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\clearpage
+\section{Objectives}
+The primary goals of this work are to (1)~develop and implement software algorithms and data structures for adaptive mesh refinement simulations, particularly in the context of high-performance parallel computers, and (2)~to use these adaptive techniques to perform a range of application studies for problems arising in the disparate areas of biological system modeling and in hypersonic aerothermodynamics. 
+
+\subsection{A Software Framework for Parallel Adaptive Mesh Refinement Simulations}
+The current work addresses this aspect of adaptive simulation in detail and illustrates the viability of adaptive schemes on parallel platforms.  During the course of this work the open-source finite element library \libMesh{} was created and has served as a testbed for parallel adaptive finite element simulations across a wide range of physical disciplines.  This software framework provides an extensible, object-oriented implementation the ideas explored in this work.  All simulations presented in subsequent chapters were performed by the author using application codes built on top of this framework.
+
+\subsection{Application Studies}
+Chapters~\ref{chap:bio} and~\ref{chap:compressible} apply the technology developed in the preceding chapters to two distinct physical applications.  First, a nonlinear reaction-diffusion model which captures key biological processes involved in the pattern formation observed in chemotactic bacteria colonies is considered.  Then laminar, supersonic/hypersonic calorically perfect gas flows in aerospace applications are simulated.  Although these two problems come from distinctly different applications, there is similarity in that they both exhibit multiscale phenomena in the form of highly localized features, making them amenable to solution via adaptive techniques.
+
+\subsubsection{Biological Transport}
+Recently mathematical models have been developed which describe the local interactions which occur in bacterial populations to produce global patterns.  These patterns often exhibit very localized, transient features which require extremely fine computational meshes to resolve.  However, the transient nature of these features implies that static uniform high-resolution mesh simulations are inefficient as substantial computational resources must then be devoted to portions of the domain which are devoid of features for the majority of the simulation.  The case of complex patterns which are experimentally observed in \emph{Escherichia coli} colonies are simulated in parallel using adaptive mesh refinement for the first time and detailed studies of localized chemotactic behavior are made.
+
+
+\subsubsection{Compressible Flows}
+The compressible Navier-Stokes equations for a laminar, calorically perfect gas are presented and discretized using a modified form of the streamline-upwind Petrov Galerkin finite element method.  A novel treatment of the inviscid flux discretization is found to increase the stability of the method when using the popular conservation variables.  This increased stability allows the method to be applied in hypersonic flows with strong shocks including shock/boundary layer and shock/shock interactions.  These flows naturally exhibit multiscale behavior that can be captured efficiently on adapted meshes. The methodology is validated by comparison with experimental data including measured skin friction, pressure, and surface heat transfer for a number of configurations.  Unsteady flows of an acoustic cavity and an axisymmetric double cone geometry are also considered.  In the case of the double cone, numerical experiments are performed which support the conjecture that freestream noise is responsible for inducing wildly unsteady response observed in recent experiments conducted at low Reynolds numbers.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contributions}
+\subsection{Primary Contributions}
+The primary contributions of this work which will be described in the subsequent chapters are:
+\begin{enumerate}
+  \tightlist
+  \item A new treatment of several algorithmic issues involved in performing adaptive flow and transport simulations on serial and parallel computers.
+  \item The development and implementation of a suite of flexible data structures for performing adaptive mesh refinement simulations on parallel computers.
+  \item A publicly available, physics-independent software framework for performing adaptive mesh refinement simulations~\cite{libMeshPaper}.
+  \item A novel approach to computing algebraic constraints for adaptively refined meshes that exploits data locality and eliminates ad--hoc constraints on refinement levels admitted for neighboring elements~\cite{libMeshPaper}.
+  \item The first known adaptive mesh refinement simulations of chemotactic reaction--diffusion biological systems and supporting detailed scientific simulation studies of evolving chemotactic patterns.
+  \item A modified inviscid flux discretization for high--speed compressible flows which enhances stability when employing the popular conservative variables.
+  \item Validation of a new software implementation for solving the compressible Navier-Stokes equations by comparing to high-quality experimental data.
+  \item An in-depth analysis and phenomenological studies of both steady and transient hypersonic laminar perfect gas flows focusing on:
+    \begin{enumerate}
+      \tightlist
+      \item Inviscid supersonic flow about a blunt body,
+      \item viscous/inviscid interactions,
+      \item acoustic cavity-induced oscillatory flow,
+      \item shock/shock interactions, and concluding with
+      \item three-dimensional hypersonic flows about reentry vehicles.
+    \end{enumerate}
+  \item Development and testing of a new approach for implementing the no--penetration condition in the Euler equations in an implicit fashion.  This approach is motivated by the weak formulation of the Euler equations and is trivial to implement on adaptively refined meshes.
+\end{enumerate}
+
+\subsection{Additional Contributions}
+The physics-independent adaptive capability developed in support of this work has been applied by the author to a number of other problem classes which will not be presented in detail in this work, including:
+\begin{enumerate}
+  \tightlist
+  \item Density-driven porous media transport with applications in groundwater flows~\cite{modelling_error}.
+  \item Rayleigh and Rayleigh-B\'{e}nard-Marangoni instabilities in incompressible flows~\cite{carey_world_scientific_2000}.
+  \item The cascadic multigrid method applied to stationary incompressible flows~\cite{kirk_lipnikov_cmg}.
+  \item Supersonic viscous flows through inlets in aerospace applications~\cite{carey_bail_2004}.
+\end{enumerate}
+
+
+%% Local Variables:
+%% TeX-master: "dissertation.tex"
+%% End:
+
+% LocalWords:  benkirk multiscale cascadic multigrid chemotactic Navier Petrov
+% LocalWords:  discretization calorically discretized Galerkin axisymmetric AMR
+% LocalWords:  freestream nard Marangoni aerothermodynamics coli chemotaxis

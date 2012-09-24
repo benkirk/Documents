@@ -1,0 +1,332 @@
+%% $Id: compressible.tex,v 1.17 2007/03/24 23:22:24 benkirk Exp $
+\chapter{Compressible Flow \label{app:compressible}}
+
+
+
+\newcommand{\gmo}{\gamma-1}
+\newcommand{\omg}{1-\gamma}
+\newcommand{\tmg}{3-\gamma}
+\newcommand{\otnu}{\frac{1}{3}\nu}
+\newcommand{\ttnu}{\frac{2}{3}\nu}
+\newcommand{\ftnu}{\frac{4}{3}\nu}
+\newcommand{\kCvr}{\frac{k}{\rho c_v}}
+\newcommand{\nubar}{\overline{\nu}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Jacobian Matrices\label{compressible_jacobian_matrices}}
+
+In the following sections several parameters (in addition to those described in Section~\ref{eq:comp_ns_math_model}) are used for notational convenience:
+\begin{align}
+  q^2 &= u^2 + v^2 + w^2\nonumber \\
+  H   &= E + \frac{P}{\rho} \nonumber \\
+  \nu &= \frac{\mu}{\rho}  \nonumber \\
+  \nubar &= \nu - \kCvr \nonumber \\
+  \vartheta &= \kCvr\left(\frac{q^2}{2} - e\right) - \nu q^2 \nonumber
+\end{align}
+ 
+\subsection{Inviscid Flux Jacobians \label{app:inviscid_jacobians}}
+
+Recall Equation~\eqref{eq:inviscid_flux_jacobian}:
+\begin{equation*}
+  \pdv{\bv{F}_i}{x_i} =
+    \pdv{\bv{F}_i}{\bv{U}} \pdv{\bv{U}}{x_i} =
+      \bt{A}_i \pdv{\bv{U}}{x_i}
+\end{equation*}
+where $\bt{A}_i = \pdv{\bv{F}_i}{\bv{U}}$ is the inviscid flux Jacobian.  Further, since $\bv{F}_i$ is a homogeneous function of degree one the following holds:
+\begin{equation*}
+  \bv{F}_i =
+    \pdv{\bv{F}_i}{\bv{U}}\;\bv{U} =
+      \bt{A}_i \bv{U}
+\end{equation*}
+The particular $\bt{A}_i$'s for the conserved variables $\bv{U}=\left[\rho, \rho u, \rho v, \rho w, \rho E \right]^T$ are explicitly defined as
+\large
+%%% A1 = dF1/dU
+\begin{equation*}
+  A_1 =
+  \begin{bmatrix}
+    0                                 & 1                      & 0                   & 0                     &  0       \\
+    \frac{\gmo}{2}q^2-u^2             & \left(\tmg\right)u     & \left(\omg\right)v  & \left(\omg\right)w    &  \gmo    \\
+    -uv                               & v                      & u                   & 0                     &  0       \\ 
+    -uw                               & w                      & 0                   & u                     &  0       \\
+    \left(\frac{\gmo}{2}q^2-H\right)u & H+\left(\omg\right)u^2 & \left(\omg\right)uv & \left(\omg\right)uw   &  \gamma u
+  \end{bmatrix}
+\end{equation*}
+
+%%% A2 = dF2/dU
+\begin{equation*}
+  A_2 =
+  \begin{bmatrix}
+    0                                 & 0                   & 1                      & 0                   & 0     \\
+    -uv                               & v                   & u                      & 0                   & 0     \\
+    \frac{\gmo}{2}q^2-v^2             & \left(\omg\right)u  & \left(\tmg\right)v     & \left(\omg\right)w  & \gmo  \\
+    -vw                               & 0                   & w                      & v                   & 0     \\
+    \left(\frac{\gmo}{2}q^2-H\right)v & \left(\omg\right)uv & H+\left(\omg\right)v^2 & \left(\omg\right)vw & \gamma v
+  \end{bmatrix}
+\end{equation*}
+
+%%% A3 = dF3/dU
+\begin{equation*}
+  A_3 =
+  \begin{bmatrix}
+    0                                 & 0                   & 0                   & 1                      & 0    \\
+    -uw                               & w                   & 0                   & u                      & 0    \\
+    -vw                               & 0                   & w                   & v                      & 0    \\
+    \frac{\gmo}{2}q^2-w^2             & \left(\omg\right)u  & \left(\omg\right)v  & \left(\tmg\right)w     & \gmo \\
+    \left(\frac{\gmo}{2}q^2-H\right)w & \left(\omg\right)uw & \left(\omg\right)vw & H+\left(\omg\right)w^2 & \gamma w
+  \end{bmatrix}
+\end{equation*}
+\normalsize
+
+\subsection{Viscous Flux Jacobians \label{app:viscous_jacobians}}
+\large
+\begin{equation*}
+  K_{11} =
+  \begin{bmatrix}
+    0                     & 0                            &          & 0        & 0\\
+    -\ftnu u              & \ftnu                        & 0        & 0        & 0\\ 
+    -\nu v                & 0                            & \nu      & 0        & 0\\
+    -\nu w                & 0                            & 0        & \nu      & 0\\
+    \vartheta - \otnu u^2 & \left(\otnu + \nubar\right)u & \nubar v & \nubar w & \kCvr
+  \end{bmatrix}
+\end{equation*}
+
+%%% K12
+\begin{equation*}
+  K_{12} =
+  \begin{bmatrix}
+    0          & 0     & 0        & 0 & 0 \\
+    \ttnu v    & 0     & -\ttnu   & 0 & 0 \\ 
+    -\nu u     & \nu   & 0        & 0 & 0 \\
+    0          & 0     & 0        & 0 & 0 \\
+    -\otnu u v & \nu v & -\ttnu u & 0 & 0
+  \end{bmatrix}
+\end{equation*}
+
+%%% K13
+\begin{equation*}
+  K_{13} =
+  \begin{bmatrix}
+    0          & 0     & 0        & 0        & 0 \\
+    \ttnu w    & 0     & 0        & -\ttnu   & 0 \\ 
+    0          & 0     & 0        & 0        & 0 \\
+    -\nu u     & \nu   & 0        & 0        & 0 \\
+    -\otnu u w & \nu w & 0        & -\ttnu u & 0
+  \end{bmatrix}
+\end{equation*}
+
+%%% K21
+\begin{equation*}
+  K_{21} =
+  \begin{bmatrix}
+    0          & 0        & 0     & 0 & 0 \\
+    -\nu v     & 0        & \nu   & 0 & 0 \\
+    \ttnu u    & -\ttnu   & 0     & 0 & 0 \\ 
+    0          & 0        & 0     & 0 & 0 \\
+    -\otnu v u & -\ttnu v & \nu u & 0 & 0
+  \end{bmatrix}
+\end{equation*}
+
+%%% K22
+\begin{equation*}
+  K_{22} =
+  \begin{bmatrix}
+    0                     & 0        & 0                            & 0        & 0 \\
+    -\nu u                & \nu      & 0                            & 0        & 0 \\
+    -\ftnu v              & 0        & \ftnu                        & 0        & 0 \\ 
+    -\nu w                & 0        & 0                            & \nu      & 0 \\
+    \vartheta - \otnu v^2 & \nubar u & \left(\otnu + \nubar\right)v & \nubar w & \kCvr
+  \end{bmatrix}
+\end{equation*}
+
+%%% K23
+\begin{equation*}
+  K_{23} =
+  \begin{bmatrix}
+    0          & 0 & 0     & 0        & 0 \\
+    0          & 0 & 0     & 0        & 0 \\
+    \ttnu w    & 0 & 0     & -\ttnu   & 0 \\ 
+    -\nu v     & 0 & \nu   & 0        & 0 \\
+    -\otnu v w & 0 & \nu w & -\ttnu v & 0
+  \end{bmatrix}
+\end{equation*}
+
+%%% K31
+\begin{equation*}
+  K_{31} =
+  \begin{bmatrix}
+    0          & 0        & 0 & 0     & 0 \\
+    -\nu w     & 0        & 0 & \nu   & 0 \\
+    0          & 0        & 0 & 0     & 0 \\
+    \ttnu u    & -\ttnu   & 0 & 0     & 0 \\ 
+    -\otnu w u & -\ttnu w & 0 & \nu u & 0
+  \end{bmatrix}
+\end{equation*}
+
+%%% K32
+\begin{equation*}
+  K_{32} =
+  \begin{bmatrix}
+    0          & 0 & 0        & 0     & 0 \\
+    0          & 0 & 0        & 0     & 0 \\
+    -\nu w     & 0 & 0        & \nu   & 0 \\
+    \ttnu v    & 0 & -\ttnu   & 0     & 0 \\ 
+    -\otnu w v & 0 & -\ttnu w & \nu v & 0
+  \end{bmatrix}
+\end{equation*}
+
+%%% K33
+\begin{equation*}
+  K_{33} =
+  \begin{bmatrix}
+    0                     & 0        & 0        & 0                            & 0 \\
+    -\nu u                & \nu      & 0        & 0                            & 0 \\
+    -\nu v                & 0        & \nu      & 0                            & 0 \\
+    -\ftnu w              & 0        & 0        & \ftnu                        & 0 \\ 
+    \vartheta - \otnu w^2 & \nubar u & \nubar v & \left(\otnu + \nubar\right)w & \kCvr
+  \end{bmatrix}
+\end{equation*}
+\normalsize
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conservation Variables to Entropy Variables Transformation\label{compressible_entropy_transformation}}
+
+
+Let $\bv{V}$ be the so-called entropy variables for the compressible Navier-Stokes system considered in Chapter~\ref{chap:compressible}. Specifically,
+\begin{equation*}
+  \bv{V} =
+  \begin{bmatrix}
+    V_1 \\
+    V_2 \\
+    V_3 \\
+    V_4 \\
+    V_5
+  \end{bmatrix}  
+  \equiv
+\frac{1}{\rho e}  
+  \begin{bmatrix}
+    -\rho E + \rho e \left(\gamma -s + 1 \right) \\
+    \rho u \\
+    \rho v \\
+    \rho w \\
+   -\rho
+  \end{bmatrix}  
+\end{equation*}
+The transformation from the conservation variables $\bv{U}$ to the entropy variables $\bv{V}$ is defined such that
+\begin{equation*}
+  \bv{V} = \bt{A}_0\,\bv{U} 
+\end{equation*}
+The inverse of this transformation,
+\begin{equation*}
+  \bv{U} = \bt{A}_0^{-1}\,\bv{V} 
+\end{equation*}
+ is used in computing the shock capturing operator~$\delta$ (c.f. Equation~\ref{eq:shock_capturing_parameter}).  This symmetric matrix is  given by 
+\large
+\begin{equation*}
+  A_0^{-1} =
+  \begin{bmatrix}
+    k^2 + \gamma        & k V_2       & k V_3     & k V_4       &  \left(k+ 1\right)V_5 \\
+    k V_2               & V_2^2 - V_5 & V_2 V_3   & V_2 V_4     &  V_2 V_5 \\
+    k V_3               & V_3 V_2     & V_3^2-V_5 & V_3 V_4     &  V_3 V_5  \\ 
+    k V_4               & V_4 V_2     & V_4 V_3   & V_4^2 - V_5 &  V_4 V_5  \\
+    \left(k+1\right)V_5 & V_5 V_2     & V_5 V_3   & V_5 V_4     &  V_5^2
+  \end{bmatrix}
+\end{equation*}
+\normalsize
+where $k=\left(\frac{V_2^2 + V_3^2 + V_4^2}{2 V_5}\right)$, and the entropy is defined as $s=\ln \left[\frac{\left(\gamma-1\right)\rho e}{\rho^\gamma} \right]$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rankine--Hugoniot Jump Conditions\label{rankine_hugoniot_jumps}}
+To determine the change in flowfield properties across a stationary normal shock wave it is sufficient to consider the steady one--dimensional Euler equations:
+\begin{equation}
+  \label{eq:steady_1D_Euler}
+  \pdv{}{x}
+  \begin{bmatrix}
+    \rho u       \\
+    \rho u^2 + P \\
+    \left(\rho E + P \right)u
+  \end{bmatrix}
+  = 0
+\end{equation}
+Denoting the pre and post--shock conditions by $()_1$ and $()_2$, respectively, Equation~\eqref{eq:steady_1D_Euler} implies
+\begin{align}
+  \label{eq:mass_jump}
+  \rho_1 u_1 &= \rho_2 u_2 \\
+  \label{eq:mom_jump}
+  \rho_1 u_1^2 + P_1 &= \rho_2 u_2^2 + P_2 \\
+  \label{eq:energy_jump}
+  \left(\rho_1 E_1 + P_1 \right)u_1 &= \left(\rho_2 E_2 + P_2 \right)u_2
+\end{align}
+From~\eqref{eq:mass_jump} we define $\kappa$, the ratio of the upstream to downstream density:
+\begin{equation}
+  \label{eq:kappa_def}
+  \kappa \equiv \frac{\rho_1}{\rho_2} = \frac{u_2}{u_1}
+\end{equation}
+For a calorically perfect gas (see~\eqref{eq:p_eq_state}--\eqref{eq:t_eq_state}) the following holds
+\begin{equation}
+  \label{eq:rE_def}
+  \rho E = \frac{P}{\gamma - 1} + \frac{1}{2} \rho u^2
+\end{equation}
+which, upon substitution into~\eqref{eq:energy_jump} yields
+\begin{align}
+  \nonumber
+  \left(\frac{\gamma}{\gamma - 1}P_1 + \frac{1}{2} \rho_1 u_1^2\right)u_1 &=
+  \left(\frac{\gamma}{\gamma - 1}P_2 + \frac{1}{2} \rho_2 u_2^2\right)u_2 \\
+  \nonumber
+  \left(\frac{\gamma}{\gamma - 1}\frac{P_1}{\rho_1} + \frac{1}{2} u_1^2\right) \rho_1 u_1 &=
+  \left(\frac{\gamma}{\gamma - 1}\frac{P_2}{\rho_2} + \frac{1}{2} u_2^2\right) \rho_2 u_2 \\
+  \label{eq:energy_jump_2}
+  \frac{\gamma}{\gamma - 1}\frac{P_1}{\rho_1} + \frac{1}{2} u_1^2 &=
+  \frac{\gamma}{\gamma - 1}\frac{P_2}{\rho_2} + \frac{1}{2} u_2^2 
+\end{align}
+Multiplying~\eqref{eq:mom_jump} by~$\frac{\gamma}{\gamma-1}\frac{1}{\rho_2}$ gives
+\begin{align}
+  \nonumber
+  \frac{\gamma}{\gamma - 1}\left(\frac{\rho_1 u_1^2}{\rho_2} + \frac{P_1}{\rho_2}\right) &=
+  \frac{\gamma}{\gamma - 1}\left(u_2^2 + \frac{P_2}{\rho_2}\right) \\
+  %\label{eq:mom_jump_2}
+  \nonumber
+  \frac{\gamma}{\gamma - 1}\left(u_1^2 + \frac{P_1}{\rho_1}\right)\kappa &=
+  \frac{\gamma}{\gamma - 1}\left(u_2^2 + \frac{P_2}{\rho_2}\right)
+\end{align}
+which, when subtracted from~\eqref{eq:energy_jump_2}, becomes
+\begin{align}
+  \nonumber
+  \frac{\gamma}{\gamma - 1}\frac{P_1}{\rho_1}\left(1-\kappa\right) +
+    \left(\frac{1}{2} - \frac{\gamma}{\gamma - 1}\kappa\right)u_1^2 &=
+    \frac{\gamma + 1}{2\left(1-\gamma\right)}u_2^2 \\
+    \label{eq:energy_mom_sub}
+  \frac{\gamma}{\gamma - 1}\frac{P_1}{\rho_1}\left(1-\kappa\right) +
+    \left(\frac{1}{2} - \frac{\gamma}{\gamma - 1}\kappa\right)u_1^2 &=
+    \frac{\gamma + 1}{2\left(1-\gamma\right)}u_1^2\kappa^2 
+\end{align}
+Recognizing that for a calorically perfect ideal gas $\gamma P/\rho=c^2$ and multiplying~\eqref{eq:energy_mom_sub} by~$\left(\gamma - 1\right)/u_1^2$ produces the following quadratic equation:
+\begin{equation}
+  \nonumber
+  \frac{\gamma + 1}{2} \kappa^2 - \left(\gamma + \frac{1}{M_1^2}\right)\kappa +
+    \frac{\gamma-1}{2} + \frac{1}{M_1^2} = 0
+\end{equation}
+which can be factored as
+\begin{equation}
+  \label{eq:quadratic}
+  \left(\kappa - 1\right)\left(\frac{\gamma + 1}{2}\kappa - \frac{\gamma-1}{2} - \frac{1}{M_1^2}\right) = 0
+\end{equation}
+The trivial solution $\kappa=1$ corresponds to no shock wave, i.e. $()_1=()_2$.  For the case of a shock wave Equation~\eqref{eq:quadratic} predicts
+\begin{equation}
+  \label{eq:kappa_value}
+  \kappa = \frac{\rho_1}{\rho_2} = \frac{u_2}{u_1} = \frac{\gamma-1}{\gamma+1} + \frac{2}{M_1^2\left(\gamma+1\right)}
+\end{equation}
+Equation~\eqref{eq:kappa_value} can be used in~\eqref{eq:mass_jump}--\eqref{eq:energy_jump} to completely determine the post--shock conditions~$()_2$.
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \clearpage
+%% \section{Sharp Double Cone Mesh Convergence}
+
+%% Local Variables:
+%% TeX-master: "dissertation.tex"
+%% TeX-command-default: "Make"
+%% End:
+
+% LocalWords:  Jacobians

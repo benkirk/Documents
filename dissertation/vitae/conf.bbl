@@ -1,0 +1,117 @@
+\begin{thebibliography}{99}
+
+\bibitem{pecos_08}
+Benjamin~.S.~Kirk, Adam~J.~Amar, ``{Orion Reentry: Modeling the Aerothermodynamic Environment and Thermal Protection System Response}.'' The University of Texas at Austin, Austin, TX, May 7 2008.
+
+\bibitem{arl_instability_08}
+Benjamin~S.~Kirk, ``{The Influence of Shock Layer Instability on Surface Heat Transfer in Hypervelocity Flows and its Relevance in Planetary Entry Vehicle Design}.'' Aberdeen Research Lab, April 1  2008.
+
+\bibitem{arl_multicore_08}
+Benjamin~S.~Kirk, ``{High-Performance Computing Technology -- Hardware Trends, Software Implications, and Multithreading}.'' Aberdeen Research Lab, March 31 2008.
+
+\bibitem{sandia07}
+Benjamin~S.~Kirk and Graham~F.~Carey, ``{Fully-Implicit, Parallel, Adaptive Finite Element Simulations of Hypersonic Flows}.'' Sandia National Lab, Albuquerque, NM, May 2007.
+
+\bibitem{defense07}
+Benjamin~S.~Kirk, ``{\href{http://cfdlab.ae.utexas.edu/~benkirk/defense.pdf}{A Fully-Implicit, Parallel, Adaptive Finite Element Algorithm for the Compressible Navier-Stokes Equations}}.'' PhD Dissertation Defense, The University of Texas at Austin, Austin, TX, May 2007.
+
+\bibitem{urgent07}
+Benjamin~S.~Kirk, ``{High-Performance Computing in Support of Space Shuttle Orbiter Damage Assessment}.''  Urgent Computing Workshop. Argonne National Lab, Argonne, IL, April 25 2007.
+
+\bibitem{fef07}
+ Graham~F.~Carey and Benjamin~S.~Kirk, ``{The SUPG Finite Element Method Applied to the Unsteady Compressible Navier-Stokes Equations}.'' 14\textsuperscript{th} International Conference on Finite Elements in Flow Problems, Santa Fe, NM, March 26--28 2007.
+ 
+\bibitem{rodeo07}
+Benjamin~S.~Kirk, ``{Treatment of the Inviscid Flux in SUPG Finite Element Simulations of Transient Hypersonic Flows}.'' Finite Element Rodeo, Houston, TX, March 2, 2007.
+
+\bibitem{acdl07}
+Benjamin~S.~Kirk, ``{SUPG Finite Element Simulations of Compressible Flows for Aerothermodynamic Applications}.'' MIT ACDL Seminar, Cambridge, MA, February 23 2007.
+
+\bibitem{usnccm8_1}
+B.~Kirk, G.~F.~Carey, ``{Compressible Flow Studies Using Parallel Adaptive Mesh Refinement}.'' 8\textsuperscript{th} U.S. Congress on Computational Mechanics, Austin, TX, July 25 2003.
+
+\bibitem{usnccm8_2}
+B.~Kirk, G.~F.~Carey, ``{Algorithms for Compressible Flow with Adaptive Mesh Refinement}.'' 8\textsuperscript{th} U.S. Congress on Computational Mechanics, Austin, TX, July 27, 2003.
+
+\bibitem{cse05_1}
+B.~Kirk, G.~F.~Carey, and J.~Peterson, ``{Parallel Data Structures for Finite Element Computations}.'' SIAM CSE Meeting, Orlando, FL, February 2005.
+
+\bibitem{cse05_2}
+G.~F.~Carey, B.~Kirk, J.~Peterson, and V.~Carey, ``{Parallel Adaptive Finite Element Simulation- Applications, Error Indicators and Algorithm Efficiency Considerations}.'' SIAM CSE Meeting, Orlando, FL, February 2005.
+
+\bibitem{siam04}
+G.~F.~Carey, W.~Barth, S.~Iqbal, B.~Kirk, and J.~Peterson, ``{Experience with Parallel CFD on Beowulf Clusters}.'' SIAM Annual Meeting, Portland, OR, July 2004.
+
+\bibitem{geosciences03}
+B.~Kirk, R.~MacKinnon, and G.~F.~Carey, ``{A Positivity-preserving Algorithm for Reactive Transport Processes: Discussion and Numerical Experiments}.'' SIAM Geosciences Conference, March 2003, Austin TX.
+
+\bibitem{barth03cluster}
+W.~Barth and B.~Kirk, ``{PC} cluster construction: Lessons learned and friendly
+  advice.'' Shortcourse on Cluster Computing and Adaptive Finite Element
+  Methods, The University of Western Australia, Perth, Australia, June 2003.
+
+\bibitem{barth03message}
+W.~Barth and B.~Kirk, ``Message passing for parallel computing via {MPI}.''
+  Shortcourse on Cluster Computing and Adaptive Finite Element Methods, The
+  University of Western Australia, Perth, Australia, June 2003.
+
+\bibitem{carey02advances}
+G.~F.~Carey, W.~Barth, B.~Kirk, J.~Woods, and S.~Iqbal, ``{Advances and Challenges in Finite Element Methods and Algorithms for High Performance Computation}.'' 14\textsuperscript{th} Symposium on Computer Architecture and High-Performance Computing (SBAC-PAD 2002), October 2002, Vitoria, Brazil.
+
+\bibitem{amflow01}
+B.~Kirk, G.~F.~Carey, and K.~L.~Lipnikov, ``{Nested and Adaptive Mesh Strategies for Coupled Transport Applications}.'' AMFLOW 2001, Heidelberg, Germany, October 2001.
+
+\bibitem{cm01}
+B.~Kirk, K.~Lipnikov, and G.~F.~Carey, ``{Cascadic Multigrid Simulation of Incompressible Viscous Flow Problems: Performance Analysis and Parallel Workstation and Cluster Implementation}.'' Copper Mountain Conference on Multigrid Methods, Copper Mountain, CO, April 2001.
+
+\bibitem{carey01parallel}
+G.~F. Carey, R.~McLay, W.~Barth, B.~Kirk, and S.~Swift, ``{Parallel Solution of
+  Coupled Viscous Flow and Transport on Parallel Supercomputers and PC
+  Clusters}.'' 2\textsuperscript{nd} Brazilian Congress on Computational Mechanics, November
+  2001.
+
+\bibitem{carey01recent}
+G.~F. Carey, W.~Barth, S.~Chow, B.~Kirk, R.~McLay, and J.~Woods, ``{Recent
+  Research on Finite Element Methodology, Algorithms and Applications}.''
+  Industrial Affiliates Meeting, The University of Texas at Austin, October
+  2001.
+
+\bibitem{barth01newtonian}
+W.~Barth, G.~F.~Carey, S.~Chow, and B.~Kirk, ``{Finite Element Modeling of Generalized Newtonian Flows}.'' Fourteenth Australasian Fluid Mechanics Conference, Adelaide, Australia, December 2001
+
+\bibitem{barth01beowulf}
+W.~Barth, B.~Kirk, G.~F. Carey, and R.~McLay, ``{Beowulf Clusters for
+  Scientific Computing}.'' Computer Science Department, University of Western
+  Australia, May 2001.
+
+\bibitem{barth01parallel}
+W.~Barth, G.~F. Carey, R.~McLay, B.~Kirk, and J.~Bailey, ``{Parallel
+  Distributed Solution of Viscous Flow with Heat Transfer on Workstation
+  Clusters}.'' CHT'01 Poster Presentation, May 2001.
+
+\bibitem{carey00mgflo}
+G.~F. Carey, R.~McLay, W.~Barth, B.~Kirk, and S.~Swift, ``{MGFLO: Viscous Flow,
+  Heat, Species, and Porous Media Transport in Parallel}.'' Poster
+  Presentation, Industrial Affiliates Meeting, University of Texas at Austin,
+  Octboer 2000.
+
+\bibitem{carey00distributed}
+G.~F. Carey, R.~McLay, W.~Barth, S.~Swift, and B.~Kirk, ``{Distributed Parallel
+  Simulation of Surface Tension Driven Viscous Flow and Transport Processes}.''
+  Fourth UNAM-CRAY Supercomputing Conference, June 2000.
+
+\bibitem{carey00parallel_2}
+B.~Barth, G.~F.~Carey, B.~Kirk, and R.~McLay, ``{Parallel Distributed Solution of Viscous flow with Heat Transfer on Workstation Clusters}.'' HPC2000 Session on PC Cluster Applications, Washington, D.C., April 2000.
+
+\bibitem{carey00parallel}
+G.~F. Carey, R.~McLay, S.~Swift, W.~Barth, B.~Kirk, and H.~Swinney, ``{Parallel
+  Solution of Coupled Viscous Flow and Transport Driven by Surface Tension}.''
+  Finite Elements in Flow Problems 2000, Thompson Conference Center, The
+  University of Texas at Austin, April 2000.
+
+\bibitem{barth98beowulf}
+W.~Barth, G.~F. C.~A. Ardelea, M.~Ma, R.~McLay, , and B.~Kirk, ``{Beowulf
+  Systems for Flow and Transport Problems}.'' Poster Presentation, CSM
+  Industrial Affiliates Meeting, UT Austin, October 1998.
+
+\end{thebibliography}

@@ -1,0 +1,143 @@
+\beamer@endinputifotherversion {3.07pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{Introduction}{3}{Introduction}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Contributions}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Contributions}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{Problem Class}}\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\slideentry {1}{2}{1}{4/4}{Problem Class}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {1}{2}{2}{5/5}{Problem Class}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{2}{3}{6/6}{Problem Class}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{7}{A Case for Parallel Adaptive Computing}}\headcommand {\beamer@subsectionpages {4}{6}}
+\headcommand {\slideentry {1}{3}{1}{7/7}{A Case for Parallel Adaptive Computing}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{8}{Governing Equations}}\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {1}{4}{1}{8/8}{Governing Equations}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{4}{2}{9/9}{Governing Equations}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {1}{4}{3}{10/10}{Governing Equations}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {1}{4}{4}{11/11}{Governing Equations}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\sectionentry {2}{SUPG FEM}{12}{The Streamline-Upwind Petrov-Galerkin Finite Element Method}{0}}
+\headcommand {\beamer@sectionpages {3}{11}}
+\headcommand {\beamer@subsectionpages {8}{11}}
+\headcommand {\slideentry {2}{0}{5}{12/12}{}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{13}{Weak Formulation}}\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\slideentry {2}{1}{1}{13/14}{Weak Formulation}{0}}
+\headcommand {\beamer@framepages {13}{14}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{15}{Shock Capturing}}\headcommand {\beamer@subsectionpages {13}{14}}
+\headcommand {\slideentry {2}{2}{1}{15/15}{Shock Capturing}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {2}{2}{2}{16/17}{Shock Capturing}{0}}
+\headcommand {\beamer@framepages {16}{17}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{18}{Inviscid Flux Discretization}}\headcommand {\beamer@subsectionpages {15}{17}}
+\headcommand {\slideentry {2}{3}{1}{18/20}{Inviscid Flux Discretization}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\slideentry {2}{3}{2}{21/21}{Inviscid Flux Discretization}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {2}{3}{3}{22/22}{Inviscid Flux Discretization}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{23}{Time Discretization}}\headcommand {\beamer@subsectionpages {18}{22}}
+\headcommand {\slideentry {2}{4}{1}{23/24}{Time Discretization}{0}}
+\headcommand {\beamer@framepages {23}{24}}
+\headcommand {\slideentry {2}{4}{2}{25/25}{Time Discretization}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{4}{1}{26}{Time-Accurate Flows}}
+\headcommand {\slideentry {2}{4}{3}{26/26}{Time Discretization}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {2}{4}{4}{27/27}{Time Discretization}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{28}{Linearization}}\headcommand {\beamer@subsectionpages {23}{27}}
+\headcommand {\slideentry {2}{5}{1}{28/28}{Linearization}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {2}{5}{2}{29/30}{Linearization}{0}}
+\headcommand {\beamer@framepages {29}{30}}
+\headcommand {\slideentry {2}{5}{3}{31/31}{Linearization}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {2}{5}{4}{32/32}{Linearization}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{2}{6}{33}{Implicit Solution Strategies}}\headcommand {\beamer@subsectionpages {28}{32}}
+\headcommand {\slideentry {2}{6}{1}{33/33}{Implicit Solution Strategies}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\sectionentry {3}{Applications}{34}{Applications}{0}}
+\headcommand {\beamer@sectionpages {12}{33}}
+\headcommand {\beamer@subsectionpages {33}{33}}
+\headcommand {\slideentry {3}{0}{2}{34/34}{}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{35}{Compression Surfaces}}\headcommand {\beamer@subsectionpages {34}{34}}
+\headcommand {\slideentry {3}{1}{1}{35/35}{Compression Surfaces}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {3}{1}{2}{36/36}{Compression Surfaces}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {3}{1}{3}{37/37}{Compression Surfaces}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{38}{Type\nobreakspace {}IV Shock Interaction}}\headcommand {\beamer@subsectionpages {35}{37}}
+\headcommand {\slideentry {3}{2}{1}{38/38}{Type\nobreakspace {}IV Shock Interaction}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {3}{2}{2}{39/39}{Type\nobreakspace {}IV Shock Interaction}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {3}{2}{3}{40/40}{Type\nobreakspace {}IV Shock Interaction}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {3}{2}{4}{41/41}{Type\nobreakspace {}IV Shock Interaction}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {3}{2}{5}{42/42}{Type\nobreakspace {}IV Shock Interaction}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {3}{2}{6}{43/43}{Type\nobreakspace {}IV Shock Interaction}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {3}{2}{7}{44/44}{Type\nobreakspace {}IV Shock Interaction}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{45}{AEDC Sharp Double Cone}}\headcommand {\beamer@subsectionpages {38}{44}}
+\headcommand {\slideentry {3}{3}{1}{45/45}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {3}{3}{2}{46/46}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {3}{3}{3}{47/47}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {3}{3}{4}{48/48}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {3}{3}{5}{49/49}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {3}{3}{6}{50/50}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {3}{3}{7}{51/51}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {3}{3}{8}{52/52}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\slideentry {3}{3}{9}{53/53}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {3}{3}{10}{54/54}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\slideentry {3}{3}{11}{55/55}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {3}{3}{12}{56/56}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\slideentry {3}{3}{13}{57/57}{AEDC Sharp Double Cone}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\sectionentry {4}{Conclusions}{58}{Conclusions}{0}}
+\headcommand {\beamer@sectionpages {34}{57}}
+\headcommand {\beamer@subsectionpages {45}{57}}
+\headcommand {\slideentry {4}{0}{14}{58/58}{}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\sectionentry {5}{Bibliography}{59}{Bibliography}{0}}
+\headcommand {\beamer@sectionpages {58}{58}}
+\headcommand {\beamer@subsectionpages {58}{58}}
+\headcommand {\slideentry {5}{0}{15}{59/59}{}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\slideentry {5}{0}{15}{59/60}{}{0}}
+\headcommand {\beamer@framepages {59}{60}}
+\headcommand {\beamer@partpages {1}{60}}
+\headcommand {\beamer@subsectionpages {59}{60}}
+\headcommand {\beamer@sectionpages {59}{60}}
+\headcommand {\beamer@documentpages {60}}
+\headcommand {\def \inserttotalframenumber {54}}

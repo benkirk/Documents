@@ -1,0 +1,74 @@
+\newlistof[chapter]{notes}{lnt}{List of Notes}
+
+%%
+%% Notes for gfc's mark up.
+%%
+
+%% The counter to use must be set up
+
+%% Set up the Margin Commands
+\newcommand{\gfcmargin}[1]{%
+  \PersonalMargin{Carey}{notes}{#1}{GFC}%
+  \addcontentsline{lnt}{notes}{%
+    \protect\numberline{\thenotes}{Marginal Comment -- GFC}}}
+
+\ifDoNotes
+  \newenvironment{gfcnote}[0]%
+  {\begin{PersonalNote}{Carey}{notes}{GFC}
+      \addcontentsline{lnt}{notes}{%
+        \protect\numberline{\thenotes}{In Text Comment -- GFC}}}%
+    {\end{PersonalNote}}
+\else
+  %% We need to do this as \comment doesn't like to be used inside another
+  %% command. ("\comment XXXX XXXX \endcomment" does nothing even if the
+  %% stuff in the interior contains commands etc. )
+  \newenvironment{gfcnote}[0]{\gfcmargin{}\comment}{\endcomment}
+\fi
+
+%%
+%% Notes for ben's mark up.
+%%
+
+%% The counter to use must be set up
+
+%% Set up the Margin Commands
+\newcommand{\benmargin}[1]{%
+  \PersonalMargin{Ben}{notes}{#1}{BB}%
+  \addcontentsline{lnt}{notes}{%
+    \protect\numberline{\thenotes}{Marginal Comment -- Ben}}}
+
+\ifDoNotes
+  \newenvironment{bennote}[0]%
+  {\begin{PersonalNote}{Ben}{notes}{BB}
+      \addcontentsline{lnt}{notes}{%
+        \protect\numberline{\thenotes}{In Text Comment -- Ben}}}%
+  {\end{PersonalNote}}
+\else
+  %% We need to do this as \comment doesn't like to be used inside another
+  %% command. ("\comment XXXX XXXX \endcomment" does nothing even if the
+  %% stuff in the interior contains commands etc. )
+  \newenvironment{bennote}[0]{\benmargin{}\comment}{\endcomment}
+\fi
+
+%%
+%% New fixme macros
+%%
+
+%% Set up the Margin Commands
+\newcommand{\fixmemargin}[1]{%
+  \PersonalMargin{Fix}{notes}{#1}{FX}%
+  \addcontentsline{lnt}{notes}{%
+    \protect\numberline{\thenotes}{Marginal FIXME}}}
+
+\ifDoNotes
+  \newenvironment{fixmenote}[0]%
+  {\begin{PersonalNote}{FIXME}{notes}{FX}
+      \addcontentsline{lnt}{notes}{%
+        \protect\numberline{\thenotes}{In Text FIXME}}}%
+  {\end{PersonalNote}}
+\else
+  %% We need to do this as \comment doesn't like to be used inside another
+  %% command. ("\comment XXXX XXXX \endcomment" does nothing even if the
+  %% stuff in the interior contains commands etc. )
+  \newenvironment{fixmenote}[0]{\fixmemargin{}\comment}{\endcomment}
+\fi

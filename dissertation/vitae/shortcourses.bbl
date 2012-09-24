@@ -1,0 +1,21 @@
+\begin{thebibliography}{99}
+
+\bibitem{arl08}
+{\em Parallel and Adaptive Non-Linear Coupled Finite Element Simulation:  Methodology, Algorithms and Software}, (PET) Aberdeen Research Lab, Maryland, March 31 \& April 1, 2008 (Graham Carey, Varis Carey, Bill Barth, Benjamin Kirk, John Peterson, and Roy Stogner).
+
+\bibitem{erdc07}
+{\em Parallel and Adaptive Non-Linear Coupled Finite Element Simulation: Methodology, Algorithms and Software}, US Army Corps of Engineers' Engineer Research and Development Center, Vicksburg, Mississippi, January 2007 (Graham Carey, Benjamin Kirk, John Peterson, Roy Stogner, and Bill Barth).
+
+\bibitem{fe_jsc04}
+{\em Finite Elements - Introduction and Applications}, Aeroscience \& Flight Mechanics Division,  NASA Lyndon B. Johnson Space Center, April 2004.
+
+\bibitem{wpafb04}
+{\em Adaptive Grid Technology}, (PET) Wright-Patterson Air Force Base, Ohio, April 22, 2004 (Graham Carey and Benjamin Kirk).
+
+\bibitem{uwa03}
+{\em Cluster Computing}, University of Western Australia, Perth, Australia, June 23-25, 2003 (Graham Carey, Benjamin Kirk, Bill Barth, Juliette Woods, Michael Anderson and Varis Carey).
+
+\bibitem{arl03}
+{\em Grid Generation and Grid Technology}, (PET) Aberdeen Research Lab, Maryland, April 14, 2003 (Graham Carey and Benjamin Kirk).
+
+\end{thebibliography}

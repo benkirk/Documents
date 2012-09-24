@@ -1,0 +1,22 @@
+% $Id: abstract.tex,v 1.9 2007/02/24 12:19:53 benkirk Exp $
+The subject of this work is the adaptive finite element simulation of  problems arising in flow and transport applications on parallel computers. Of particular interest are new contributions to adaptive mesh refinement (AMR) in this parallel high-performance context, including novel work on data structures, treatment of constraints in a parallel setting, generality and extensibility via object-oriented programming, and the design/implementation of a flexible software framework.  This technology and software capability then enables more robust, reliable treatment of multiscale--multiphysics problems and specific studies of fine scale interaction such as those in biological chemotaxis (Chapter~\ref{chap:bio}) and high-speed shock physics for compressible flows (Chapter~\ref{chap:compressible}).
+
+The work begins by presenting an overview of key concepts and data structures employed in AMR simulations.  Of particular interest is how these concepts are applied in the physics-independent software framework which is developed here and is the basis for all the numerical simulations performed in this work.  This open-source software framework has been adopted by a number of researchers in the U.S.\ and abroad for use in a wide range of applications.
+
+The dynamic nature of adaptive simulations pose particular issues for efficient implementation on distributed-memory parallel architectures. Communication cost, computational load balance, and memory requirements must all be considered when developing adaptive software for this class of machines.  Specific extensions to the adaptive data structures to enable implementation on parallel computers is therefore considered in detail.
+
+The \libMesh{} framework for performing adaptive finite element simulations on parallel computers is developed to provide a concrete implementation of the above ideas.  This physics-independent framework is applied to two distinct flow and transport applications classes in the subsequent application studies to illustrate the flexibility of the design and to demonstrate the capability for resolving complex multiscale processes efficiently and reliably.
+
+The first application considered is the simulation of chemotactic biological systems such as colonies of \emph{Escherichia coli}. This work appears to be the first application of AMR to chemotactic processes. These systems exhibit transient, highly localized features and are important in many biological processes, which make them ideal for simulation with adaptive techniques.  A nonlinear reaction-diffusion model for such systems is described and a finite element formulation is developed.  The solution methodology is described in detail.  Several phenomenological studies are conducted to study chemotactic processes and resulting biological patterns which use the parallel adaptive refinement capability developed in this work. 
+
+The other application study is much more extensive and deals with fine scale interactions for important hypersonic flows arising in aerospace applications.  These flows are characterized by highly nonlinear, convection-dominated flowfields with very localized features such as shock waves and boundary layers. These localized features are well-suited to simulation with adaptive techniques. A novel treatment of the inviscid flux terms arising in a streamline-upwind Petrov-Galerkin finite element formulation of the compressible Navier-Stokes equations is also presented and is found to be superior to the traditional approach. The parallel adaptive finite element formulation is then applied to several complex flow studies, culminating in fully three-dimensional viscous flows about complex geometries such as the Space Shuttle Orbiter.  Physical phenomena such as viscous/inviscid interaction, shock wave/boundary layer interaction, shock/shock interaction, and unsteady acoustic-driven flowfield response are considered in detail.  A computational  investigation of a 25$^\circ$/55$^\circ$ double cone configuration details the complex multiscale flow features and investigates a potential source of experimentally-observed unsteady flowfield response.
+
+
+
+%% Local Variables:
+%% mode: LaTeX
+%% TeX-master: "dissertation.tex"
+%% End:
+
+% LocalWords:  chemotactic coli flowfields shock waves Petrov Galerkin Navier
+% LocalWords:  shock wave flowfield AMR multiscale multiphysics chemotaxis

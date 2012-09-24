@@ -1,0 +1,51 @@
+%% $Id: conclusions.tex,v 1.7 2007/04/22 13:50:54 benkirk Exp $
+\chapter{Conclusions\label{chap:conclusions}}
+
+Numerical simulations which use adaptive mesh refinement  allow for detailed investigations of multiscale phenomena to be performed efficiently.  Still, the use of AMR techniques is not widespread in the engineering community.  This is particularly the case of simulations performed on massively parallel computers. This work considered the viability of adaptive finite element methods for simulating of flow and transport problems, particularly on high-performance parallel computers.
+
+
+\section{Adaptive Mesh Refinement on Parallel Computers}
+Chapter~\ref{chap:amr} described a number of key data structures and algorithms which enable adaptive mesh refinement simulations.  Object-oriented programming approaches are natural when implementing adaptive methods, particularly in the case of hybrid unstructured meshes, and are overviewed. Key concepts such as degree of freedom constraints, element-independent adaptivity, and tree data structures were reviewed.  Error indicators and refinement criteria guide the process of refinement and were discussed.
+
+The dynamic nature of AMR simulations has complicated their efficient implementation on parallel computers. Chapter~\ref{chap:parallel} considered the particular issues that arise when implementing adaptive methods on distributed memory machines and posed particular solutions to a number of these difficulties.  The domain-decomposition approach for achieving parallelism in finite element simulations was discussed, along with the important issue of dynamic load balancing which must be addressed in any parallel adaptive software implementation.  
+
+The ideas presented in Chapters~\ref{chap:amr} and~\ref{chap:parallel} have been implemented in the open-source software library \libMesh{}.  The basis for the library is the observation that the majority of the enabling software technology required by adaptive methods is independent of the class of problems being solved.  Thus, by implementing this technology as a set of core services independent of an application code, the considerable level-of-effort required to implement parallel adaptive finite element simulations was amortized across a wide range of applications. The physics-independent software framework \libMesh{} was developed during the course of this work and has been adopted by a number of researchers both in the U.S.\ and abroad.  
+
+\section{Biological Transport}
+\enlargethispage{\baselineskip}
+The particular application of chemotactic bacteria systems was addressed in Chapter~\ref{chap:bio}.  Such systems have been observed to form very complex, transient patterns.  This work applies the developed adaptive technology to the problem of pattern formation in \emph{E.coli} bacteria colonies.
+
+A nonlinear reaction-diffusion set of coupled partial differential equations is presented in detail.  This numerical model, first presented by Murray et al.~\cite{spatial_patters_in_bio}, forms the basis for a finite element formulation which is then used to perform a number of application studies.  The numerical method used to approximate the mathematical model is discussed in detail. A time integration technique with adaptive temporal error control based on the the Adams-Bashforth predictor/corrector scheme was presented, as was the Newton linearization used to solve the highly nonlinear, coupled set of equations.
+
+The application studies examined the important questions of temporal and mesh convergence.  Both the short- and long-term behavior of a chemotactic system is examined in detail.  The chapter culminates in the first known application of AMR to the problem of pattern formation in chemotactic biological systems.  This work demonstrated the applicability of AMR to such systems and paves the way for detailed parametric studies of chemotactic processes using efficient adaptive techniques.
+
+\section{Compressible Flows}
+
+Chapter~\ref{chap:compressible} treats the problem of hypersonic aerothermodynamics which is of interest in the field of aerospace engineering.  Hypersonic flows are characterized by convection-dominated flowfields exhibiting highly localized features such as shock waves and boundary layers.  These features make them ideally suited for the adaptive techniques developed in this work.
+
+The compressible Navier-Stokes equations for a calorically perfect, laminar gas for the basic mathematical model used for simulating this class of flows.  The equations form a tightly coupled system of nonlinear partial-differential equations which form a mixed elliptic--hyperbolic set for the case of supersonic flows.  The governing equations were described in detail.  A stabilized weak form was then derived which uses the streamline-upwind Petrov-Galerkin (SUPG) finite element method to simulate high-Reynolds number flows.  The SUPG scheme is augmented by a modified shock capturing operator which is required to eliminate spurious oscillations in the vicinity of shock waves.
+
+This stabilized weak formulation was the basis for the discrete finite element model developed in this work.  This model uses a novel approach for discretizing the inviscid flux terms which appear in the stabilized formulation.  This approach has proven more stable than the traditional method and has enabled the SUPG finite element scheme to be applied in this work to very complex flows.
+
+The performance of the fully implicit, adaptive finite element algorithm was then tested through a number of application studies.  These studies include that of inviscid flow about a blunt body and viscous/inviscid interaction in the case of a hypersonic flow over compression corners.  Critical issues such as nonlinear solver convergence, temporal convergence, and mesh convergence were all addressed.  The suitability of AMR for this class of problems was also investigated in the context of these benchmark cases.  The method was validated by comparison to experimentally-measured quantities of interest such as surface pressure, shear, and heat transfer distributions.
+
+The validated method was then applied to a number of complex applications including hypersonic flow about a double cone, periodic flow about a spherical nose tip/cavity configuration, and type~IV shock/shock interaction on a cylinder.  Experimental data, including heat transfer distributions and optically-measured flowfield properties, were used to provide additional validation for these complex cases.  Finally, the chapter culminates in the investigation of hypersonic flow about a number of complex three-dimensional geometries (including the Space Shuttle Orbiter) at reentry conditions.  The adaptive mesh refinement technology developed in this work is applied in three dimensions to the case of the X-38 Crew Return Vehicle at wind tunnel conditions.  The extent of the separated region resulting from the deflected body flap is seen to be quite sensitive to the mesh resolution employed in the simulation.
+
+While only laminar, calorically perfect gases are considered in this work, the AMR technology is expected to generalize directly to the case of turbulent and/or reacting flows.  Future work will extend the range of applicability of the finite element model by including state equations for gases in thermal equilibrium.  The effects of turbulence may be included through the typical Reynolds-Averaged Navier-Stokes approach by implementing suitable turbulence models.
+
+This work examined highly dynamic flows which result due to both freestream noise in conventional wind tunnels and because of natural instabilities in the complex flowfields.  Favorable comparisons were found with average values measured in experiments.  Further work employing high-rate data measurement techniques with fast response surface instrumentation could be used to further validate the complex transient flows seen in some parts of this work.
+
+Shock waves are largely one-dimensional structures in that they exhibit extremely high gradients in predominantly one direction.  As such, the isotropic mesh refinement approach used in this work may lead to a proliferation of degrees of freedom.  This is especially the case in three dimensions.  Future work should consider coupling a mesh redistribution/smoothing scheme with anisotropic refinement so that these features may be resolved optimally with a limited set of resources.
+
+The streamline-upwind Petrov-Galerkin finite element formulation used here is applicable on fully unstructured meshes. Future work should apply the current finite element scheme to a range of unstructured mesh topologies in order to assess the influence of mesh quality in aerothermodynamic applications During the course of this work this capability was just barely exercised (recall the hybrid surface discretization of figure~\ref{fig:x38_mesh}).  This was largely due to the relatively simple geometries used for validation and the availability of preexisting block-structured grids.  The use of unstructured meshes in the context of aerothermodynamic applications is still in its infancy, largely because to date the majority of finite volume schemes applied in the unstructured setting have produced unsatisfactory results.  Still, the ability to use unstructured meshes (as opposed to block-structured grids) is highly desirable because the time associated with mesh generation may be drastically reduced.  The SUPG scheme developed in this work provides a natural way to assess the influence of unstructured mesh quality on aerothermodynamic predictive capability.
+
+
+
+%% Local Variables:
+%% TeX-master: "dissertation.tex"
+%% End:
+
+% LocalWords:  multiscale AMR overviewed chemotactic coli al Bashforth Navier
+% LocalWords:  linearization aerothermodynamics flowfields calorically Petrov
+% LocalWords:  Galerkin SUPG discretizing proven freestream aerothermodynamic
+% LocalWords:  discretization flowfield
