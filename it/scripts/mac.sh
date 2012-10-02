@@ -1,0 +1,1 @@
+sudo port install openmpi tbb subversion git-core +svn git-extras gcc_select gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended boost cgal eigen3 scons gsl doxygen graphviz gsed hdf5-18 +fortran +gcc45
