@@ -10,52 +10,16 @@ export LSCOLORS="Bxfxcxdxcxegedabagacad"
 bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
-
-
-# #########################################
-# # Deal.II
-# #########################################
-# export DEALII_DIR=/Users/benkirk/codes/deal.II
-# export DYLD_LIBRARY_PATH=$DEALII_DIR/lib:$DYLD_LIBRARY_PATH
-
 # #########################################
 # # Boost
 # #########################################
 export BOOST_DIR=/opt/local
-#export BOOST_DIR=/usr/local/boost/1.47.0
 export BOOST_ROOT=$BOOST_DIR
-#export DYLD_LIBRARY_PATH=$BOOST_DIR/lib:$DYLD_LIBRARY_PATH
-
-#########################################
-# Doxygen
-#########################################
-PATH=/Applications/Doxygen.app/Contents/Resources:$PATH
 
 #########################################
 # Tecplot
 #########################################
 PATH=/Applications/Tec360_2010/bin:$PATH
-
-#########################################
-# XCode
-#########################################
-PATH=/Developer/usr/bin:$PATH
-
-# ##########################################
-# ## GCC
-# ##########################################
-# export GCC_DIR=/usr/local
-# export DYLD_LIBRARY_PATH=$GCC_DIR/lib:$DYLD_LIBRARY_PATH
-# export           MANPATH=$GCC_DIR/man:$MANPATH
-#                    PATH=$GCC_DIR/bin:$PATH
-
-# #########################################
-# # GSL
-# #########################################
-# export GSL_DIR=/usr/local/gsl/1.12
-# export DYLD_LIBRARY_PATH=$GSL_DIR/lib:$DYLD_LIBRARY_PATH
-# export           MANPATH=$GSL_DIR/share/man:$MANPATH
-#                     PATH=$GSL_DIR/bin:$PATH
 
 # #########################################
 # # Intel TBB
@@ -73,13 +37,18 @@ export TBB_DIR=/opt/local
 # export           MANPATH=$MPI_DIR/man:$MANPATH
 #                     PATH=$MPI_DIR/bin:$PATH
 export libmesh_CXXFLAGS="-DOMPI_SKIP_MPICXX"
+export OMPI_CC=/opt/local/bin/gcc
+export OMPI_CXX=/opt/local/bin/g++
+export OMPI_FC=/opt/local/bin/gfortran
+export OMPI_F77=/opt/local/bin/gfortran
 
-#########################################
-# PETSc
-#########################################
-export PETSC_DIR=/usr/local/petsc/3.1-p8
-export PETSC_ARCH=macosx
-#export SLEPC_DIR=/usr/local/slepc/3.1-p6
+# #########################################
+# # PETSc
+# #########################################
+export PETSC_DIR=/opt/local/lib/petsc
+# export PETSC_DIR=/usr/local/petsc/3.1-p8
+# export PETSC_ARCH=macosx
+export SLEPC_DIR=$PETSC_DIR
 
 #########################################
 # Cantera & friends
@@ -103,11 +72,11 @@ PATH=/usr/local/gmv:$PATH
 ###############################################################################
 alias ls="ls -G"
 alias ll="ls -l"
-alias Emacs.Window="/Applications/Emacs.app/Contents/MacOS/Emacs"
-export EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs"
+alias Emacs.Window="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
+export EDITOR="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
 alias startsocket="rm -f ~/.ssh/sfe.sock; ssh -p 24 -fN sfe-master"
 
-export CHAR_ROOT=$HOME/codes/EG3/codes/char
+export CHAR_ROOT=$HOME/codes/char
 export FINS_ROOT=$HOME/codes/fins
 export FINS_USER_OPTIONS="-ksp_monitor_draw -display :0.0 -ksp_right_pc"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
@@ -123,9 +92,6 @@ pro()   { export METHOD=pro;    export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export
 devel() { export METHOD=devel;  export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
 devel;
 
-lonestar() { ssh lonestar.tacc.utexas.edu; }
-cfdlab()   { ssh cfdlab.ae.utexas.edu; }
-
 # Working directory in Xterm title bar stuff
 cd() {
   OLDERPWD="$OLDPWD"
@@ -136,13 +102,13 @@ cd() {
                         -e 's;^/[^/][^/]*/..*/\(..*/\);\.\.\./\1;'`
 }
 
-mklibmesh() {
-    sourcename=$1
-    filename=`basename $sourcename .C` 
-    echo \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxx\` \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxxflags --include\` $sourcename -o $filename \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --ldflags\`
-    `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxx` `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxxflags --include` $sourcename -o $filename `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --ldflags`
-}
-
+# mklibmesh() {
+#     sourcename=$1
+#     filename=`basename $sourcename .C` 
+#     echo \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxx\` \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxxflags --include\` $sourcename -o $filename \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --ldflags\`
+#     `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxx` `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxxflags --include` $sourcename -o $filename `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --ldflags`
+# }
+ 
 xsettitle() { 
   builtin echo -n -e "\033]2;$1\007"; 
 }
@@ -163,14 +129,6 @@ function cleantime {
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 }
 
-##
-# Your previous /Users/benkirk/.profile file was backed up as /Users/benkirk/.profile.macports-saved_2010-10-27_at_08:25:52
-##
-
-# MacPorts Installer addition on 2010-10-27_at_08:25:52: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 
 function use_xcode_ony {
     unset PETSC_DIR
@@ -181,11 +139,9 @@ function use_xcode_ony {
 
     PATH=/Developer/usr/bin:/Applications/Tec360_2010/bin:/Applications/Doxygen.app/Contents/Resources:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/X11/bin
 }
-##
-# Your previous /Users/benkirk/.profile file was backed up as /Users/benkirk/.profile.macports-saved_2012-07-27_at_20:59:37
-##
 
-# MacPorts Installer addition on 2012-07-27_at_20:59:37: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
+PATH=/opt/local/bin:$PATH
 
+# Local Variables:
+# mode: shell-script
+# End:
