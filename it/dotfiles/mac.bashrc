@@ -53,8 +53,7 @@ export SLEPC_DIR=$PETSC_DIR
 #########################################
 # Cantera & friends
 #########################################
-#export CANTERA_DIR=/usr/local/cantera/1.8.x
-export CANTERA_DIR=/usr/local/cantera/2.0.x-r1472
+export CANTERA_DIR=/usr/local/cantera/2.0.0b1-r1472
 export DYLD_LIBRARY_PATH=$CANTERA_DIR/lib:$DYLD_LIBRARY_PATH
 
 export MASA_DIR=/Users/benkirk/codes/fins/contrib/install
@@ -73,12 +72,13 @@ PATH=/usr/local/gmv:$PATH
 alias ls="ls -G"
 alias ll="ls -l"
 alias Emacs.Window="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
+alias make="make --no-print-directory"
 export EDITOR="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
 alias startsocket="rm -f ~/.ssh/sfe.sock; ssh -p 24 -fN sfe-master"
 
 export CHAR_ROOT=$HOME/codes/char
 export FINS_ROOT=$HOME/codes/fins
-export FINS_USER_OPTIONS="-ksp_monitor_draw -display :0.0 -ksp_right_pc"
+export FINS_USER_OPTIONS="-ksp_right_pc"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
 export MASA_DIR=$FINS_ROOT/contrib/install
 # export ABLATION_DIR=$FINS_ROOT/contrib/install
