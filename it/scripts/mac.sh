@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# First install:
+# --------------
+#
+#
+#
+
+# To update:
+# ----------
+#  cd /opt/local/var/macports/sources/svn.macports.org/trunk/dports/
+#  sudo svn up
+#  sudo port sync -d
+#  sudo port upgrade outdated
+
 port install python27
 
 port install git-core +subversion
@@ -7,7 +20,7 @@ port install git-core +subversion
 port install emacs-app color-theme-mode.el
 
 # compilers, mpi, latex, & development libraries
-port install openmpi tbb subversion git-core +svn git-extras gcc_select gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended boost cgal eigen3 scons gsl doxygen graphviz gsed hdf5-18 +fortran +gcc45 clang-3.1 clang_select glpk vtk5
+port install openmpi tbb subversion git-core +svn git-extras gcc_select gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils boost cgal eigen3 scons gsl doxygen graphviz gsed hdf5-18 +fortran +gcc45 clang-3.1 clang_select glpk vtk5
 
 # set the default gcc and clang
 port select gcc mp-gcc45
@@ -17,7 +30,7 @@ port select clang mp-clang-3.1
 port install petsc slepc
 
 # octave and its packages
-port install octave octave-devel octave-general octave-gsl octave-image octave-io octave-linear-algebra octave-missing-functions octave-msh octave-optiminterp octave-optim octave-plot octave-specfun octave-splines octave-statistics octave-strings octave-struct octave-physicalconstants octave-odepkg
+port install octave octave-general octave-gsl octave-image octave-io octave-linear-algebra octave-missing-functions octave-msh octave-optiminterp octave-optim octave-plot octave-specfun octave-splines octave-statistics octave-strings octave-struct octave-physicalconstants octave-odepkg
 
 
 # make symbolic links to OpenMPI commands
