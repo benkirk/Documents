@@ -20,7 +20,7 @@ port install git-core +subversion
 port install emacs-app color-theme-mode.el
 
 # compilers, mpi, latex, & development libraries
-port install openmpi tbb subversion git-core +svn git-extras gcc_select gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils boost cgal eigen3 scons gsl doxygen graphviz gsed hdf5-18 +fortran +gcc45 clang-3.1 clang_select glpk vtk5
+port install openmpi tbb subversion git-core +svn git-extras gcc_select gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils boost cgal eigen3 scons gsl doxygen graphviz gsed hdf5-18 +fortran +gcc45 clang-3.1 clang_select glpk vtk5 ImageMagick
 
 # set the default gcc and clang
 port select gcc mp-gcc45
