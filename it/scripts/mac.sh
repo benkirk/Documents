@@ -23,7 +23,7 @@ port install openmpi tbb subversion git-core +svn git-extras gcc_select gmake au
 port install hdf5-18 +fortran +gcc45
 
 # graphics utilities, useful with latex
-port install ImageMagick inkscape dia
+port install ImageMagick inkscape dia aspell aspell-dict-en
 
 # set the default gcc and clang
 port select gcc mp-gcc45
