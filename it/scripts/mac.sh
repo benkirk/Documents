@@ -98,6 +98,9 @@ port install synergy
 # octave and its packages
 port install octave octave-general octave-gsl octave-io octave-linear-algebra octave-missing-functions octave-msh octave-optim octave-plot octave-specfun octave-splines octave-statistics octave-strings octave-struct octave-physicalconstants octave-odepkg
 
+# gimp & friends
+port install gimp2 gimp-print macfile-gimp macclipboard-gimp
+
 # make symbolic links to OpenMPI commands
 mkdir -p /opt/local/var/macports/build/_opt_local_var_macports_sources_svn.macports.org_trunk_dports_science_openmpi/openmpi/work/build/opal/mca/hwloc/hwloc132/hwloc/src
 cd /opt/local/bin
