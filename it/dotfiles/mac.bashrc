@@ -21,17 +21,17 @@ export BOOST_ROOT=$BOOST_DIR
 #########################################
 PATH=/Applications/Tec360_2010/bin:$PATH
 
-# #########################################
-# # Intel TBB
-# #########################################
+#########################################
+# Intel TBB
+#########################################
 export TBB_DIR=/opt/local
 # export TBB_DIR=/usr/local/tbb/tbb30_035oss
 # export TBB_LIB_PATH=$TBB_DIR/build/macos_intel64_gcc_cc4.5.0_os10.6.4_release
 # export DYLD_LIBRARY_PATH=$TBB_LIB_PATH:$DYLD_LIBRARY_PATH
 
-# #########################################
-# # MPI
-# #########################################
+#########################################
+# MPI
+#########################################
 # export MPI_DIR=/usr/local/mpi/openmpi/1.4.5-gcc-4.5
 # export DYLD_LIBRARY_PATH=$MPI_DIR/lib:$DYLD_LIBRARY_PATH
 # export           MANPATH=$MPI_DIR/man:$MANPATH
@@ -42,13 +42,19 @@ export OMPI_CXX=/opt/local/bin/g++
 export OMPI_FC=/opt/local/bin/gfortran
 export OMPI_F77=/opt/local/bin/gfortran
 
-# #########################################
-# # PETSc
-# #########################################
+#########################################
+# PETSc
+#########################################
 export PETSC_DIR=/opt/local/lib/petsc
 # export PETSC_DIR=/usr/local/petsc/3.1-p8
 # export PETSC_ARCH=macosx
 export SLEPC_DIR=$PETSC_DIR
+
+#########################################
+# Trilinos
+#########################################
+export TRILINOS_DIR=/usr/local/trilinos/11.0.3
+export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
 
 #########################################
 # Cantera & friends

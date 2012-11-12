@@ -66,7 +66,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # clang first - among other things, seesm to install ld64, and that helps
 # some more fragile ports work later
-port install clang-3.1 clang_select
+port install clang-3.1 clang-3.2 clang_select
 port select clang mp-clang-3.1
 
 port install emacs-app color-theme-mode.el
