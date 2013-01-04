@@ -1,3 +1,6 @@
 articles/unsorted
 books/*.epub
+*~
+*/*~
+*/*/*~
 .DS_Store
