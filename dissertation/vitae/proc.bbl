@@ -1,53 +1,58 @@
 \begin{thebibliography}{1}
+\bibitem{aiaa-2013-306}
+  Benjamin S. Kirk and Todd A. Oliver, {``Validation of SUPG Finite Element Simulations of Shockwave/Turbulent Boundary Layer Interactions in Hypersonic Flow.''} {\em 51\textsuperscript{st} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2013-306, Grapevine, Texas, January 2013.
+
+\bibitem{aiaa-2013-33}
+Christopher Combs, Noel Clemens, Paul Danehy, Brett Bathel, Ron Parker, Tim Wadhams, Michael Holden, and Benjamin Kirk {``NO PLIF Visualizations of the Orion Capsule in LENS-I.''} {\em 51\textsuperscript{st} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2013-33, Grapevine, Texas, January 2013.
 
 \bibitem{aiaa-2011-3779}
-  Paul Bauman, Jeremy Jagodzinski, and Benjamin Kirk, `{Statistical Calibration of Thermocouple Gauges Used for Inferring Heat Flux}.''  {\em 20\textsuperscript{th} AIAA Computational Fluid Dynamics Conference}, AIAA Paper 2011-3779, Honolulu, Hawaii, June 2011.
+  Paul Bauman, Jeremy Jagodzinski, and Benjamin Kirk, {``Statistical Calibration of Thermocouple Gauges Used for Inferring Heat Flux.''}  {\em 20\textsuperscript{th} AIAA Computational Fluid Dynamics Conference}, AIAA Paper 2011-3779, Honolulu, Hawaii, June 2011.
   
 \bibitem{aiaa-2011-3841}
-  Steven Bova and Benjamin Kirk, ``{On the Preservation of Total Enthalpy in SUPG Methods}.'' {\em 20\textsuperscript{th} AIAA Computational Fluid Dynamics Conference}, AIAA Paper 2011-3841, Honolulu, Hawaii, June 2011.
+  Steven Bova and Benjamin Kirk, {``On the Preservation of Total Enthalpy in SUPG Methods.''} {\em 20\textsuperscript{th} AIAA Computational Fluid Dynamics Conference}, AIAA Paper 2011-3841, Honolulu, Hawaii, June 2011.
 
 \bibitem{aiaa-2011-144}
-  Adam Amar, Nathan Calvert, and Benjamin Kirk, ``{Development and Verification of the Charring Ablating Thermal Protection Implicit System Solver}.'' {\em 49\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2011-144, Orlando, Florida, January 2011.
+  Adam Amar, Nathan Calvert, and Benjamin Kirk, {``Development and Verification of the Charring Ablating Thermal Protection Implicit System Solver.''} {\em 49\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2011-144, Orlando, Florida, January 2011.
   
 \bibitem{aiaa-2011-134}
-  Benjamin S. Kirk, Steven Bova, and Ryan Bond, ``{A Streamline-Upwind Petrov-Galerkin Finite Element Scheme for Non-Ionized Hypersonic Flows in Thermochemical Nonequilibrium}.'' {\em 49\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2011-134, Orlando, Florida, January 2011. 
+  Benjamin S. Kirk, Steven Bova, and Ryan Bond, {``A Streamline-Upwind Petrov-Galerkin Finite Element Scheme for Non-Ionized Hypersonic Flows in Thermochemical Nonequilibrium.''} {\em 49\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2011-134, Orlando, Florida, January 2011. 
 
 \bibitem{aiaa-2010-1560}
-Steven Bova, Ryan Bond, and Benjamin S. Kirk, ``{Stabilized Finite Element Scheme for High Speed Flows with Chemical Non-Equilibrium}.'' {\em 48\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2010-1560, Orlando, Florida, January 2010.
+Steven Bova, Ryan Bond, and Benjamin S. Kirk, {``Stabilized Finite Element Scheme for High Speed Flows with Chemical Non-Equilibrium.''} {\em 48\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2010-1560, Orlando, Florida, January 2010.
 
 \bibitem{aiaa-2010-1183}
-Benjamin S. Kirk,, Steven Bova, Ryan Bond, ``{The Influence of Stabilization Parameters in the SUPG Finite Element Method for Hypersonic Flows}.'' {\em 48\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2010-1183, Orlando, Florida, January 2010.
+Benjamin S. Kirk,, Steven Bova, Ryan Bond, {``The Influence of Stabilization Parameters in the SUPG Finite Element Method for Hypersonic Flows.''} {\em 48\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2010-1183, Orlando, Florida, January 2010.
 
 \bibitem{aiaa-2010-1462}
-Paul Bauman, Roy Stogner, Graham Carey, Karl Schulz, Rochan Updadhyay, Andre Maurente, Benjamin Kirk, John Howell, Ofodike Ezekoye, ``{Multiphysics Coupling for Reentry Flows}.'' {\em 48\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2010-1462, Orlando, Florida, January 2010.
+Paul Bauman, Roy Stogner, Graham Carey, Karl Schulz, Rochan Updadhyay, Andre Maurente, Benjamin Kirk, John Howell, Ofodike Ezekoye, {``Multiphysics Coupling for Reentry Flows.''} {\em 48\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2010-1462, Orlando, Florida, January 2010.
 
 \bibitem{aiaa-2009-730}
-Benjamin S. Kirk, ``{The Influence of Shock Layer Instability on Surface Heat Transfer in Hypervelocity Flows and its Relevance in Planetary Entry Vehicle Design}.'' {\em 47\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2009-730, Orlando, Florida, January 2009.
+Benjamin S. Kirk, {``The Influence of Shock Layer Instability on Surface Heat Transfer in Hypervelocity Flows and its Relevance in Planetary Entry Vehicle Design.''} {\em 47\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2009-730, Orlando, Florida, January 2009.
 
 \bibitem{aiaa-2008-1226}
-Brian R. Hollis, Karen T. Berger, Thomas J. Horvath, Joseph J. Coblish, Joseph D. Norris, Randolph P. Lillard, and Benjamin S. Kirk, ``{Aeroheating Testing and Predictions for Project Orion CEV at Turbulent Conditions}.'' {\em 46\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2008-1226, Reno, Nevada, January 2008.
+Brian R. Hollis, Karen T. Berger, Thomas J. Horvath, Joseph J. Coblish, Joseph D. Norris, Randolph P. Lillard, and Benjamin S. Kirk, {``Aeroheating Testing and Predictions for Project Orion CEV at Turbulent Conditions.''} {\em 46\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2008-1226, Reno, Nevada, January 2008.
 
 \bibitem{aiaa-2008-921}
 D. Boger, R. Noack, A. Amar, B. Kirk, R. Lillard, and M. Olsen,
-``{Overset Grid Applications in Hypersonic Flow Using the DPLR Flow Solver}.''  {\em 46\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2008-921, Reno, Nevada, January 2008.
+{``Overset Grid Applications in Hypersonic Flow Using the DPLR Flow Solver.''}  {\em 46\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2008-921, Reno, Nevada, January 2008.
 
 \bibitem{aiaa-2007-603}
-  J. Greathouse, B. Kirk, R. Lillard, T. Troung, P. Robinson, and C. Cerimele, ``{Crew Exploration Vehicle (CEV) Crew Module shape selection analysis and CEV Aeroscience Project Overview }.'' {\em 45\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2007-603, Reno, Nevada, January 2007.
+  J. Greathouse, B. Kirk, R. Lillard, T. Troung, P. Robinson, and C. Cerimele, {``Crew Exploration Vehicle (CEV) Crew Module shape selection analysis and CEV Aeroscience Project Overview.''} {\em 45\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2007-603, Reno, Nevada, January 2007.
   
 \bibitem{aiaa-2006-2922}
-  Scott A. Berry, Thomas J. Horvath, Amy M. Cassady, Benjamin S. Kirk, K.C. Wang, and Andrew J. Hyatt, ``{Boundary Layer Transition Results From STS-114}.''{\em 9\textsuperscript{th} AIAA/ASME Joint Thermophysics and Heat Transfer Conference}, AIAA Paper 2006-2922, San Francisco, CA, June 2006.
+  Scott A. Berry, Thomas J. Horvath, Amy M. Cassady, Benjamin S. Kirk, K.C. Wang, and Andrew J. Hyatt, {``Boundary Layer Transition Results From STS-114.''}{\em 9\textsuperscript{th} AIAA/ASME Joint Thermophysics and Heat Transfer Conference}, AIAA Paper 2006-2922, San Francisco, CA, June 2006.
 
 \bibitem{aiaa-2006-2921}
-  Catherine B. McGinley, Scott A. Berry, Gerald R. Kinder, Maria Barnwell, Kuo C. Wang, and Benjamin S. Kirk, ``{Review of Orbiter Flight Boundary Layer Transition Data}.'' {\em 9\textsuperscript{th} AIAA/ASME Joint Thermophysics and Heat Transfer Conference}, AIAA Paper 2006-2921, San Francisco, CA, June 2006.
+  Catherine B. McGinley, Scott A. Berry, Gerald R. Kinder, Maria Barnwell, Kuo C. Wang, and Benjamin S. Kirk, {``Review of Orbiter Flight Boundary Layer Transition Data.''} {\em 9\textsuperscript{th} AIAA/ASME Joint Thermophysics and Heat Transfer Conference}, AIAA Paper 2006-2921, San Francisco, CA, June 2006.
 
 \bibitem{cfd05}
-G.~F.~Carey, W.~Barth, B.~Kirk, and J.~Peterson, ``{Parallel CFD for Flow and Transport Applications Including Unstructured and Adaptive Grids}.'' in {\em Parallel Computational Fluid Dynamics - Multidisciplinary Applications}, G.~Winter, A.~Ecer, J.~Periaux, N.~Satofuka and P.~Fox (Eds), Elsevier Science B.V., Amsterdam, The Netherlands, 2005.
+G.~F.~Carey, W.~Barth, B.~Kirk, and J.~Peterson, {``Parallel CFD for Flow and Transport Applications Including Unstructured and Adaptive Grids.''} in {\em Parallel Computational Fluid Dynamics - Multidisciplinary Applications}, G.~Winter, A.~Ecer, J.~Periaux, N.~Satofuka and P.~Fox (Eds), Elsevier Science B.V., Amsterdam, The Netherlands, 2005.
 
 % \bibitem{cfd04}
-% G.~F.~Carey, W.~Barth, B.~Kirk, and J.~Peterson, ``{Parallel CFD for Flow and Transport Applications Including Unstructured and Adaptive Grids}.'' in {\em Proceedings of Parallel CFD 2004}, G.~Winter, A.~Ecer, J.~Periaux, N.~Satofuka and P.~Fox (Eds), Elsevier Science B.V., Amsterdam, The Netherlands, October 2004.
+% G.~F.~Carey, W.~Barth, B.~Kirk, and J.~Peterson, {``Parallel CFD for Flow and Transport Applications Including Unstructured and Adaptive Grids.''} in {\em Proceedings of Parallel CFD 2004}, G.~Winter, A.~Ecer, J.~Periaux, N.~Satofuka and P.~Fox (Eds), Elsevier Science B.V., Amsterdam, The Netherlands, October 2004.
 
 \bibitem{afc01}
-W.~Barth, G.~Carey, S.~Chow, and B.~Kirk, ``{Finite Element Modeling of
+W.~Barth, G.~Carey, S.~Chow, and B.~Kirk, {``Finite Element Modeling of
   Generalised Newtonian Flows},'' in {\em Proceedings of the 14th Australasian
   Fluids Conference, Adelaide}, December 2001.
 
@@ -60,7 +65,7 @@ G.~F. Carey, R.~McLay, W.~Barth, S.~Swift, and B.~Kirk, ``Distributed parallel
   World Scientific, June 2000.
 
 \bibitem{hpc00}
-W.~Barth, G.~F. Carey, B.~Kirk, and R.~McLay, ``{Parallel Distributed Solution
+W.~Barth, G.~F. Carey, B.~Kirk, and R.~McLay, {``Parallel Distributed Solution
   Of Viscous Flow With Heat Transfer On Workstation Clusters},'' in {\em High
   Performance Computing '00 Proceedings}, (Washington, DC), April 2000.
 

@@ -1,4 +1,4 @@
-\documentclass[11pt]{report}
+\documentclass[10pt]{report}
 
 \usepackage{times}
 \usepackage{layout}
@@ -42,10 +42,10 @@ pdfsubject={Vitae}
 
 %\layout
 
-\begin{cv}{\centerline{Benjamin S. Kirk}\\
-    \centerline{\small Curriculum Vitae}}
+\begin{cv}{\centerline{\Large Benjamin S. Kirk}\\
+    \centerline{\large Curriculum Vitae}}
 
-  \vspace{-1em}
+  \vspace{-0.5em}
   \hskip-1.5em
   \begin{minipage}[h]{.5\textwidth}
     Born January 26, 1978 \\
@@ -57,14 +57,14 @@ pdfsubject={Vitae}
     2101 NASA Parkway \\
     Mail Code: EG3 \\
     Houston, TX 77058 \\
-    281-483-9491 \\
+    832.221.7467 \\
   \end{minipage}
 
 % Education Section  
   \begin{cvlist}{Education}
     \currentpdfbookmark{Education}{education}
     \item[6/2002 -- 5/2007]
-      Ph.D. Aerospace Engineering,
+      Ph.D.\ Aerospace Engineering,
       The University of Texas at Austin. GPA: 3.94
 
       Thesis: \href{http://cfdlab.ae.utexas.edu/~benkirk/dissertation.pdf}{\emph{Adaptive Finite Element Simulation of Flow and Transport Applications on Parallel Computers}}, May 2007.
@@ -82,17 +82,19 @@ pdfsubject={Vitae}
     \currentpdfbookmark{Research Interests}{research}
     \item[Computational Fluid Dynamics] \mbox{ }
       \begin{itemize}
-        \small
+        %\small
         \item[-] Numerical simulation of hypersonic, thermochemical nonequilibrium flows.
         \item[-] Coupled multiphysics simulation of ablating reentry vehicles.
         \item[-] Stabilized finite element methods for convective-dominated flows.
+        \item[-] Numerical methods for biomedical applications.
+        \item[-] Fluid-structure interaction.
       \end{itemize}
     \item[High-Performance Computing] \mbox{ }
       \begin{itemize}
-        \small
+        %\small
         \item[-] Numerical methods for massively parallel adaptive mesh refinement simulations.
         \item[-] Multilevel parallel algorithm development and implementation.
-        \item[-] HPC library design and development.
+        \item[-] High-performance computing library design and development.
       \end{itemize}
   \end{cvlist}
   
@@ -102,8 +104,11 @@ pdfsubject={Vitae}
     \currentpdfbookmark{Work Experience}{work}
     \item[12/2003 -- Present]
       Aerospace Engineer, NASA Lyndon B.\ Johnson Space Center, Aeroscience \& Flight Mechanics Division, Applied Aeroscience \& CFD Branch.
-      \small
+      %\small
       \begin{itemize}
+        \item[-]
+          Advanced modeling and simulation technology development for simulation of ablating reentry vehicles.
+
         \item[-]
           Aerothermodynamic analysis lead in support of Orion Crew Module design.
         \item[-]
@@ -111,7 +116,7 @@ pdfsubject={Vitae}
           design environments and overall system requirements.
         \item[-]
           Designed and executed high-enthalpy wind tunnel and arc-jet tests to provide 
-          validation data for computational methods.
+          vehicle design information and validation data for computational methods.
         \item[-] 
           Served as aerosciences lead for Space Shuttle Orbiter Reinforced Carbon/Carbon (RCC) 
           repair activities.
@@ -120,11 +125,11 @@ pdfsubject={Vitae}
           during STS-114--STS-123.  Supported EVAs to execute thermal protection system 
           repair during STS-114 and -117.
       \end{itemize}
-      \normalsize
+      %\normalsize
 
     \item[8/1998 -- 12/2003]
       Research Assistant and System Administrator, The University of Texas at Austin
-      \small
+      %\small
       \begin{itemize}
 	\item[-]
 	  Parallel algorithm research and development for adaptive,
@@ -138,33 +143,40 @@ pdfsubject={Vitae}
 	\item[-]
 	  Administer a heterogeneous UNIX network.
       \end{itemize}
-      \normalsize
+      %\normalsize
 
-      \item[8/1997 -- 5/1999]
-	Temporary Professional Co-Op, Lockheed Martin Space Mission Systems \& Services
-	\small
-	\begin{itemize}
-	  \item[-]
-	    Researched feasibility of the human exploration of Mars.
-	  \item[-]
-	    Created programs to analyze Space Shuttle plume heating to the
-	    International Space Station.
-	  \item[-]
-	    Conducted multiphase, chemically reacting supersonic flow analysis
-	    of rocket engines.
-	  \item[-]
-	    Upgraded and documented an orbital debris reentry simulation program for
-	    a major revision release.
-	  \item[-]
-	    Generated and analyzed three dimensional grids for hypersonic reentry
-	    vehicles in chemical and thermal non-equilibrium flow regimes.
-	\end{itemize}
-	\normalsize
+      %% \item[8/1997 -- 5/1999]
+      %%   Temporary Professional Co-Op, Lockheed Martin Space Mission Systems \& Services
+      %%   \small
+      %%   \begin{itemize}
+      %%     \item[-]
+      %%       Researched feasibility of the human exploration of Mars.
+      %%     \item[-]
+      %%       Created programs to analyze Space Shuttle plume heating to the
+      %%       International Space Station.
+      %%     \item[-]
+      %%       Conducted multiphase, chemically reacting supersonic flow analysis
+      %%       of rocket engines.
+      %%     \item[-]
+      %%       Upgraded and documented an orbital debris reentry simulation program for
+      %%       a major revision release.
+      %%     \item[-]
+      %%       Generated and analyzed three dimensional grids for hypersonic reentry
+      %%       vehicles in chemical and thermal non-equilibrium flow regimes.
+      %%   \end{itemize}
+      %%   \normalsize
   \end{cvlist}
 
 % Honors & Awards  
   \begin{cvlist}{Honors and Awards}
     \currentpdfbookmark{Honors and Awards}{honors}
+
+    \item[June 2012]
+      \textbf{NASA Early Career Achievement Medal.}
+
+      \begin{quote}
+        \em For outstanding contributions in support of human spaceflight and foundational discipline advancing efforts in the area of multi-physics modeling and simulation initiatives.
+      \end{quote}
 
     \item[May 2010]
       NASA Group Achievement Award, presented to the {\em Shuttle Boundary Layer Transition Tool Development Team}
@@ -176,7 +188,11 @@ pdfsubject={Vitae}
     NASA Group Achievement Award, presented to the {\em CEV Aerosciences Project}.
 
     \item[May 2009]
-      {\em Stellar Award - Early Career Category}, from the Rotary National Award for Space Achievement (RNASA) Foundation.
+      \textbf{Rotary National Award for Space Achievement (RNASA) Foundation {\em Stellar Award} - Early Career Category.}
+      \begin{quote}
+        \em For outstanding technical contributions in determination of accurate aerothermal environments for safe operation of the Space Shuttle orbiter and development of the Orion spacecraft.
+      \end{quote}
+        
 
     \item[March 2009]
     NASA Group Achievement Award, presented to the {\em Soyuz Assessment Team}.
@@ -185,13 +201,17 @@ pdfsubject={Vitae}
     NASA Group Achievement Award, presented to the {\em MH-13 Orbiter Aerothermodynamic Test Team}.
 
     \item[January 2008]
-     RCC Repair Team Award, presented to the Reinforced Carbon/Carbon repair team for designing and implementing an on-orbit repair techique suitable to Orbiter nosecap and wing-leading-edge damage.
+     RCC Repair Team Award, presented to the Reinforced Carbon/Carbon repair team for designing and implementing an on-orbit repair technique suitable to Orbiter nosecap and wing-leading-edge damage.
 
     \item[July 2007]
       NASA Lyndon B.~Johnson Space Center Group Achievement Award, presented to the {\em STS-117 OMS Pod Blanket Repair Team}.
 
     \item[August 2006]
-      NASA's Astronauts' Personal Achievement {\em Silver Snoopy} Award. Given ``for professionalism, dedication, and outstanding support that greatly enhanced space flight safety and mission success.''
+      \textbf{NASA's Astronauts' Personal Achievement {\em Silver Snoopy} Award.}
+
+      \begin{quote}
+        \em In recognition of your contributions to the Orbiter Aerothermal Return-to-Flight Team as you took a lead role in the development of a tool used to assess damage to the thermal protection system.
+      \end{quote}
       
     \item[April 2006]
       NASA Group Achievement Award, presented to the {\em Orbiter Aerothermodynamics Working Group}.
@@ -237,9 +257,9 @@ pdfsubject={Vitae}
     \subpdfbookmark{Journal Articles}{journal}
     \bibliographystylejournal{ieeetr}
     \nocitejournal{adiabaticSC10,fins_aiaa10,                            %% 2010
-                   wterror09,                                            %% 2009
+                   kirk_chemotaxis,wterror09,                            %% 2009
                    ctwatch08,                                            %% 2008
-                   fins_ijnmf,benkirk_dissertation,                      %% 2007
+                   fins_ijnmf, %benkirk_dissertation,                    %% 2007
                    libMeshPaper,jsr06,tmj06,                             %% 2006
                    modelling_error,carey_bail_2004,                      %% 2004
                    kirk_lipnikov_cmg}                                    %% 2003
@@ -248,7 +268,8 @@ pdfsubject={Vitae}
     % Conference Proceedings Articles  
     \currentpdfbookmark{Conference Proceedings}{proc}
     \bibliographystyleproc{ieeetr}
-    \nociteproc{aiaa-2011-3779,aiaa-2011-3841,aiaa-2011-144,aiaa-2011-134, %% 2011
+    \nociteproc{aiaa-2013-306,aiaa-2013-33,                                %% 2013
+                aiaa-2011-3779,aiaa-2011-3841,aiaa-2011-144,aiaa-2011-134, %% 2011
                 aiaa-2010-1560,aiaa-2010-1183,aiaa-2010-1462,              %% 2010
                 aiaa-2009-730,                                             %% 2009
                 aiaa-2008-1226,aiaa-2008-921,                              %% 2008
@@ -359,3 +380,5 @@ pdfsubject={Vitae}
 \end{cv}
 
 \end{document}
+
+% LocalWords:  hypersonic
