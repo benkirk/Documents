@@ -10,9 +10,14 @@ export LSCOLORS="Bxfxcxdxcxegedabagacad"
 bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
-# #########################################
-# # Boost
-# #########################################
+
+PATH=/usr/local/enscript/bin:/Applications/Tec360_2012r1/bin:$PATH
+export ENSCRIPT_LIBRARY=/usr/local/enscript/etc
+
+
+#########################################
+# Boost
+#########################################
 export BOOST_DIR=/opt/local
 export BOOST_ROOT=$BOOST_DIR
 
@@ -45,10 +50,10 @@ export OMPI_F77=/opt/local/bin/gfortran
 #########################################
 # PETSc
 #########################################
-export PETSC_DIR=/opt/local/lib/petsc
-# export PETSC_DIR=/usr/local/petsc/3.1-p8
-# export PETSC_ARCH=macosx
-export SLEPC_DIR=$PETSC_DIR
+#export PETSC_DIR=/opt/local/lib/petsc
+export PETSC_DIR=/usr/local/petsc/3.3-p6
+export PETSC_ARCH=macosx
+export SLEPC_DIR=/usr/local/slepc/3.3-p3
 
 #########################################
 # Trilinos
@@ -73,29 +78,31 @@ PATH=/usr/local/gmv:$PATH
 
 
 ###############################################################################
-# aliases 
+# aliases
 ###############################################################################
 alias ls="ls -G"
 alias ll="ls -l"
 alias Emacs.Window="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
-alias make="make --no-print-directory"
+alias make="make --no-print-directory -s"
 export EDITOR="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
 alias startsocket="rm -f ~/.ssh/sfe.sock; ssh -p 24 -fN sfe-master"
 
 export CHAR_ROOT=$HOME/codes/char
-export FINS_ROOT=$HOME/codes/fins
-export FINS_USER_OPTIONS="-ksp_right_pc"
+export FINS_STABLE_ROOT=$HOME/codes/fins
+export FINS_ROOT=$FINS_STABLE_ROOT #$HOME/codes/fins.reorder
+export FCCHT_ROOT=$HOME/codes/fccht
+export FINS_USER_OPTIONS="-ksp_right_pc -ksp_converged_reason"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
-export MASA_DIR=$FINS_ROOT/contrib/install
+export MASA_DIR=$FINS_STABLE_ROOT/contrib/install
 # export ABLATION_DIR=$FINS_ROOT/contrib/install
-export LIBMESH_ROOT=$HOME/codes/libmesh
+export LIBMESH_ROOT=$HOME/codes/install
 export LIBMESH_DIR=$LIBMESH_ROOT
 PATH=$LIBMESH_ROOT/contrib/bin:$PATH
- 
-opt()   { export METHOD=opt;    export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
-dbg()   { export METHOD=dbg;    export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
-pro()   { export METHOD=pro;    export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
-devel() { export METHOD=devel;  export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
+
+opt()   { export METHOD=opt;    export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export FCCHT_BUILD_DIR=$FCCHT_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
+dbg()   { export METHOD=dbg;    export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export FCCHT_BUILD_DIR=$FCCHT_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
+pro()   { export METHOD=pro;    export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export FCCHT_BUILD_DIR=$FCCHT_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
+devel() { export METHOD=devel;  export FINS_BUILD_DIR=$FINS_ROOT/$METHOD; export FCCHT_BUILD_DIR=$FCCHT_ROOT/$METHOD; export CHAR_BUILD_DIR=$CHAR_ROOT/$METHOD; }
 devel;
 
 # Working directory in Xterm title bar stuff
@@ -110,18 +117,18 @@ cd() {
 
 # mklibmesh() {
 #     sourcename=$1
-#     filename=`basename $sourcename .C` 
+#     filename=`basename $sourcename .C`
 #     echo \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxx\` \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxxflags --include\` $sourcename -o $filename \`/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --ldflags\`
 #     `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxx` `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --cxxflags --include` $sourcename -o $filename `/Users/benkirk/codes/libmesh/contrib/bin/libmesh-config --ldflags`
 # }
- 
-xsettitle() { 
-  builtin echo -n -e "\033]2;$1\007"; 
+
+xsettitle() {
+  builtin echo -n -e "\033]2;$1\007";
 }
 
 export HISTSIZE=1024
 export HISTCONTROL=ignoreboth
- 
+
 APWD=`pwd`
 CWD=`echo $APWD | sed -e "s;^$HOME_DIR;~;"`
 PROMPT_COMMAND='xsettitle "($METHOD) $USER@elfboy: $CWD"'
@@ -136,17 +143,23 @@ function cleantime {
 }
 
 
-function use_xcode_ony {
+function use_xcode_only {
     unset PETSC_DIR
     unset MPI_DIR
     unset TBB_DIR
     unset SLEPC_DIR
+    unset TRILINOS_DIR
     unset DYLD_LIBRARY_PATH
 
-    PATH=/Developer/usr/bin:/Applications/Tec360_2010/bin:/Applications/Doxygen.app/Contents/Resources:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/X11/bin
+    PATH=/Developer/usr/bin:/Applications/Tec360_2012r1/bin:/Applications/Doxygen.app/Contents/Resources:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/X11/bin
 }
 
 PATH=/opt/local/bin:$PATH
+
+
+if (test -f $HOME/codes/libmesh.benkirk/contrib/autotools/bin/automake); then
+    PATH=$HOME/codes/libmesh.benkirk/contrib/autotools/bin:$PATH
+fi
 
 # Local Variables:
 # mode: shell-script
