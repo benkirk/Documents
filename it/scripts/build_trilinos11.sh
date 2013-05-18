@@ -1,0 +1,22 @@
+
+export TRILINOS_HOME=/tmp/trilinos-11.2.2-Source
+export TRILINOS_VERSION=11.2.2
+
+
+
+echo $MPI_ID_STRING-$COMPILER_ID_STRING
+export TRILINOS_INSTALL_PATH=/usr/local/trilinos/11.2.2
+
+rm -rf /tmp/trilinos_build
+mkdir /tmp/trilinos_build
+cd  /tmp/trilinos_build
+MPI_DIR=/opt/local
+
+cmake -DCMAKE_BUILD_TYPE:STRING=RELEASE -DBLAS_LIBRARY_DIRS:PATH="/opt/local/lib" -DBLAS_LIBRARY_NAMES:STRING="blas" -DLAPACK_LIBRARY_DIRS:PATH="/opt/local/lib" -DLAPACK_LIBRARY_NAMES:STRING="lapack" -DTrilinos_ENABLE_OpenMP:BOOL=ON -DTrilinos_ENABLE_TESTS:BOOL=ON -DTrilinos_ENABLE_Tpetra=ON -DTrilinos_ENABLE_Epetra=ON -DTrilinos_ENABLE_NOX=ON -DTrilinos_ENABLE_AztecOO=ON -DTrilinos_ENABLE_ML=ON -DTrilinos_ENABLE_ALL_OPTIONAL_PACKAGES:BOOL=ON -DTrilinos_ENABLE_TESTS:BOOL=ON -DTPL_ENABLE_MPI:BOOL=ON -DMPI_BASE_DIR:PATH=$MPI_DIR -DMPI_BIN_DIR:PATH=$MPI_DIR/bin -DBUILD_SHARED_LIBS:BOOL=ON -DMPI_EXEC:FILEPATH="$MPI_DIR/bin/mpiexec"  -DCMAKE_C_COMPILER:FILEPATH="$MPI_DIR/bin/mpicc" -DCMAKE_CXX_COMPILER:FILEPATH="$MPI_DIR/bin/mpicxx" -DCMAKE_Fortran_COMPILER:FILEPATH="$MPI_DIR/bin/mpif90"  -DCMAKE_INSTALL_PREFIX:PATH=$TRILINOS_INSTALL_PATH ${TRILINOS_HOME}
+
+
+#make -j 32 && make test OMP_NUM_THREADS=8 || exit 1
+
+make -j 4 && make test || exit 1
+rm -rf $TRILINOS_INSTALL_PATH
+make install

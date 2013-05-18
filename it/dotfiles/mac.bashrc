@@ -11,7 +11,7 @@ bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
 
-PATH=/usr/local/enscript/bin:/Applications/Tec360_2012r1/bin:$PATH
+PATH=/usr/local/enscript/bin:/Applications/paraview.app/Contents/MacOS:/Applications/Tec360_2012r1/bin:$PATH
 export ENSCRIPT_LIBRARY=/usr/local/enscript/etc
 
 
@@ -58,7 +58,7 @@ export SLEPC_DIR=/usr/local/slepc/3.3-p3
 #########################################
 # Trilinos
 #########################################
-export TRILINOS_DIR=/usr/local/trilinos/11.0.3
+export TRILINOS_DIR=/usr/local/trilinos/11.2.2
 export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
 
 #########################################
@@ -95,7 +95,7 @@ export FINS_USER_OPTIONS="-ksp_right_pc -ksp_converged_reason"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
 export MASA_DIR=$FINS_STABLE_ROOT/contrib/install
 # export ABLATION_DIR=$FINS_ROOT/contrib/install
-export LIBMESH_ROOT=$HOME/codes/install
+export LIBMESH_ROOT=/usr/local/libmesh/0.9.1
 export LIBMESH_DIR=$LIBMESH_ROOT
 PATH=$LIBMESH_ROOT/contrib/bin:$PATH
 
@@ -154,7 +154,7 @@ function use_xcode_only {
     PATH=/Developer/usr/bin:/Applications/Tec360_2012r1/bin:/Applications/Doxygen.app/Contents/Resources:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/X11/bin
 }
 
-PATH=/opt/local/bin:$PATH
+PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 
 if (test -f $HOME/codes/libmesh.benkirk/contrib/autotools/bin/automake); then
