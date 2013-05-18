@@ -1,0 +1,4 @@
+================================================================================
+Starting Configure Run at Mon Apr 22 20:17:07 2013
+Configure Options: --configModules=PETSc.Configure --optionsModule=PETSc.compilerOptions --with-mpi=1 --download-ml --download-hypre --with-hdf5-dir=/opt/local --with-cc=/opt/local/bin/openmpicc --with-cxx=/opt/local/bin/openmpicxx --with-fc=/opt/local/bin/openmpif90 --with-mpiexec=/opt/local/bin/openmpiexec --with-blas-lib=/usr/lib/libblas.dylib --with-lapack-lib=/usr/lib/liblapack.dylib --with-debugging=no
+Working directory: /usr/local/petsc/3.3-p6
