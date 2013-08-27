@@ -64,11 +64,12 @@ export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
 #########################################
 # Cantera & friends
 #########################################
-export CANTERA_DIR=/usr/local/cantera/2.0.0b1-r1472
+export CANTERA_DIR=/usr/local/cantera/2.0.2
 export DYLD_LIBRARY_PATH=$CANTERA_DIR/lib:$DYLD_LIBRARY_PATH
 
 export MASA_DIR=/Users/benkirk/codes/fins/contrib/install
 export ABLATION_DIR=$MASA_DIR
+export GSI_DIR=$MASA_DIR
 #export GRVY_DIR=$MASA_DIR
 
 #########################################
@@ -95,7 +96,7 @@ export FINS_USER_OPTIONS="-ksp_right_pc -ksp_converged_reason"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
 export MASA_DIR=$FINS_STABLE_ROOT/contrib/install
 # export ABLATION_DIR=$FINS_ROOT/contrib/install
-export LIBMESH_ROOT=/usr/local/libmesh/0.9.1
+export LIBMESH_ROOT=/usr/local/libmesh/0.9.2.1
 export LIBMESH_DIR=$LIBMESH_ROOT
 PATH=$LIBMESH_ROOT/contrib/bin:$PATH
 
