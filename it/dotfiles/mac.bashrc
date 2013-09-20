@@ -1,7 +1,7 @@
 #########################################
 # Modify environment
 #########################################
-PS1="elfboy(\#)$ "
+PS1="imac(\#)$ "
 
 # Pretty ls colors for light text on dark background
 export LSCOLORS="Bxfxcxdxcxegedabagacad"
@@ -132,7 +132,7 @@ export HISTCONTROL=ignoreboth
 
 APWD=`pwd`
 CWD=`echo $APWD | sed -e "s;^$HOME_DIR;~;"`
-PROMPT_COMMAND='xsettitle "($METHOD) $USER@elfboy: $CWD"'
+PROMPT_COMMAND='xsettitle "($METHOD) $USER@imac: $CWD"'
 
 function cleantime {
     elapsed=$((`date +%s` - 1282740919))
