@@ -1,7 +1,7 @@
 #########################################
 # Modify environment
 #########################################
-PS1="imac(\#)$ "
+PS1="elfboy(\#)$ "
 
 # Pretty ls colors for light text on dark background
 export LSCOLORS="Bxfxcxdxcxegedabagacad"
@@ -11,8 +11,7 @@ bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
 
-PATH=/usr/local/enscript/bin:/Applications/paraview.app/Contents/MacOS:/Applications/Tec360_2012r1/bin:$PATH
-export ENSCRIPT_LIBRARY=/usr/local/enscript/etc
+PATH=/Applications/paraview.app/Contents/MacOS:/Applications/Tec360_2012r1/bin:$PATH
 
 
 #########################################
@@ -30,17 +29,10 @@ PATH=/Applications/Tec360_2010/bin:$PATH
 # Intel TBB
 #########################################
 export TBB_DIR=/opt/local
-# export TBB_DIR=/usr/local/tbb/tbb30_035oss
-# export TBB_LIB_PATH=$TBB_DIR/build/macos_intel64_gcc_cc4.5.0_os10.6.4_release
-# export DYLD_LIBRARY_PATH=$TBB_LIB_PATH:$DYLD_LIBRARY_PATH
 
 #########################################
 # MPI
 #########################################
-# export MPI_DIR=/usr/local/mpi/openmpi/1.4.5-gcc-4.5
-# export DYLD_LIBRARY_PATH=$MPI_DIR/lib:$DYLD_LIBRARY_PATH
-# export           MANPATH=$MPI_DIR/man:$MANPATH
-#                     PATH=$MPI_DIR/bin:$PATH
 export libmesh_CXXFLAGS="-DOMPI_SKIP_MPICXX"
 export OMPI_CC=/opt/local/bin/gcc
 export OMPI_CXX=/opt/local/bin/g++
@@ -51,9 +43,9 @@ export OMPI_F77=/opt/local/bin/gfortran
 # PETSc
 #########################################
 #export PETSC_DIR=/opt/local/lib/petsc
-export PETSC_DIR=/usr/local/petsc/3.3-p6
+export PETSC_DIR=/usr/local/petsc/3.4.2
 export PETSC_ARCH=macosx
-export SLEPC_DIR=/usr/local/slepc/3.3-p3
+export SLEPC_DIR=/usr/local/slepc/3.4.2
 
 #########################################
 # Trilinos
@@ -86,7 +78,7 @@ alias ll="ls -l"
 alias Emacs.Window="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
 alias make="make --no-print-directory -s"
 export EDITOR="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
-alias startsocket="rm -f ~/.ssh/sfe.sock; ssh -p 24 -fN sfe-master"
+alias startsocket="rm -f ~/.ssh/sfe.sock; ssh -fN sfe-master"
 
 export CHAR_ROOT=$HOME/codes/char
 export FINS_STABLE_ROOT=$HOME/codes/fins
@@ -96,7 +88,7 @@ export FINS_USER_OPTIONS="-ksp_right_pc -ksp_converged_reason"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
 export MASA_DIR=$FINS_STABLE_ROOT/contrib/install
 # export ABLATION_DIR=$FINS_ROOT/contrib/install
-export LIBMESH_ROOT=/usr/local/libmesh/0.9.2.1
+export LIBMESH_ROOT=/usr/local/libmesh/0.9.2.2
 export LIBMESH_DIR=$LIBMESH_ROOT
 PATH=$LIBMESH_ROOT/contrib/bin:$PATH
 
@@ -132,7 +124,7 @@ export HISTCONTROL=ignoreboth
 
 APWD=`pwd`
 CWD=`echo $APWD | sed -e "s;^$HOME_DIR;~;"`
-PROMPT_COMMAND='xsettitle "($METHOD) $USER@imac: $CWD"'
+PROMPT_COMMAND='xsettitle "($METHOD) $USER@elfboy: $CWD"'
 
 function cleantime {
     elapsed=$((`date +%s` - 1282740919))

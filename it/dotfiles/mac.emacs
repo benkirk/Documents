@@ -29,7 +29,8 @@
  ;; If there is more than one, they won't work right.
  '(display-battery-mode t)
  '(inhibit-startup-screen t)
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

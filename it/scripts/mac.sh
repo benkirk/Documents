@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-#xcodebuild -license
+# # xcodebuild -license
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
@@ -50,7 +50,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # EOF
 
 # port -d sync
- 
+
 # First install:
 # --------------
 #
@@ -67,25 +67,25 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # clang first - among other things, seesm to install ld64, and that helps
 # some more fragile ports work later
-port install clang-3.3 clang_select
-port select clang mp-clang-3.3
+port install clang-3.4 clang_select
+port select clang mp-clang-3.4
 
 port install emacs-app color-theme-mode.el
 
 # set the default gcc
-port install gcc47 gcc_select
-port select gcc mp-gcc47
+port install gcc48 gcc_select
+port select gcc mp-gcc48
 
-port install hdf5-18 +fortran +gcc47
+port install hdf5-18 +fortran +gcc48
 
 # mpi, latex, & development libraries
-port install openmpi tbb subversion git-core +svn git-extras gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils texlive-bin-extra texlive-generic-recommended boost eigen3 scons gsl doxygen graphviz gsed dos2unix # vtk5 cgal valgrind
+port install openmpi tbb subversion git-core +svn  gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils texlive-bin-extra texlive-generic-recommended boost eigen3 scons gsl doxygen graphviz gsed dos2unix vtk5 cgal # valgrind git-extras
 
 # petsc
 #port install petsc slepc
 
 # graphics utilities, useful with latex
-#port install ImageMagick inkscape dia aspell aspell-dict-en
+port install ImageMagick inkscape dia aspell aspell-dict-en
 
 # gnuplot
 port install gnuplot
@@ -97,20 +97,24 @@ luarocks install luaposix
 port install synergy
 
 # octave and its packages
-port install atlas +gcc47
-port install octave octave-general octave-gsl octave-io octave-linear-algebra octave-missing-functions octave-msh octave-optim octave-plot octave-specfun octave-splines octave-statistics octave-strings octave-struct octave-physicalconstants octave-odepkg
+#port install atlas +gcc48
+port install octave +accelerate +gcc48 -atlas
+#port install octave-general octave-gsl octave-io octave-linear-algebra octave-missing-functions octave-msh octave-optim octave-plot octave-specfun octave-splines octave-statistics octave-strings octave-struct octave-physicalconstants octave-odepkg
 
 # gimp & friends
 port install gimp2 gimp-print macfile-gimp macclipboard-gimp
 
+# x11
+port install xorg-server
+
 # make symbolic links to OpenMPI commands
-mkdir -p /opt/local/var/macports/build/_opt_local_var_macports_sources_svn.macports.org_trunk_dports_science_openmpi/openmpi/work/build/opal/mca/hwloc/hwloc132/hwloc/src
+#mkdir -p /opt/local/var/macports/build/_opt_local_var_macports_sources_svn.macports.org_trunk_dports_science_openmpi/openmpi/work/build/opal/mca/hwloc/hwloc132/hwloc/src
 cd /opt/local/bin
 for file in mpirun mpicc mpicxx mpif77 mpif90 ; do
     ln -s open$file $file ; ls -l $file
 done
 # prefer some macports commands
-ln -s gln ln && ls -l ln
+ln -s gmake make && ls -l make
 cd -
 
 # octave installs liblapack.a, which breaks petsc
