@@ -50,7 +50,7 @@ export SLEPC_DIR=/usr/local/slepc/3.4.2
 #########################################
 # Trilinos
 #########################################
-export TRILINOS_DIR=/usr/local/trilinos/11.2.2
+export TRILINOS_DIR=/usr/local/trilinos/11.4.1
 export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
 
 #########################################
