@@ -76,7 +76,7 @@ port select gcc mp-gcc48
 port install hdf5-18 +fortran +gcc48
 
 # mpi, latex, & development libraries
-port install openmpi tbb subversion git-core +svn  gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils texlive-bin-extra texlive-generic-recommended boost eigen3 scons gsl doxygen graphviz gsed dos2unix vtk5 cgal git-extras #valgrind
+port install openmpi tbb subversion git-core +svn  gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils texlive-bin-extra texlive-generic-recommended texlive-math-extra boost eigen3 scons gsl doxygen graphviz gsed dos2unix vtk5 cgal git-extras valgrind
 
 # petsc
 #port install petsc slepc
