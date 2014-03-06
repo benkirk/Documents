@@ -1,5 +1,8 @@
 \begin{thebibliography}{99}
 
+\bibitem{prace13}
+{\em The \texttt{libMesh} Finite Element Library}, PRACE Summer School, Ostrava, Czech Republic,  June 17, 2013. (Benjamin Kirk, John Peterson, and Roy Stogner).
+
 \bibitem{arl08}
 {\em Parallel and Adaptive Non-Linear Coupled Finite Element Simulation:  Methodology, Algorithms and Software}, (PET) Aberdeen Research Lab, Maryland, March 31 \& April 1, 2008 (Graham Carey, Varis Carey, Bill Barth, Benjamin Kirk, John Peterson, and Roy Stogner).
 

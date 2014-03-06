@@ -1,5 +1,9 @@
 \begin{thebibliography}{99}
 
+\bibitem{fins_cnf14}
+Benjamin S. Kirk, Roy H. Stogner, Paul T. Bauman, Todd A. Oliver, \href{http://dx.doi.org/10.1016/j.compfluid.2013.10.003}{``Modeling hypersonic entry with the fully-implicit Navier–Stokes (\texttt{FIN-S}) stabilized finite element flow solver.''} {\em Computers \& Fluids}, 92(20):281--292, March 2014.
+
+
 \bibitem{fins_aiaa10}
 Benjamin S.~Kirk, Graham F. Carey, ``{Validation Studies of Fully-Implicit, Parallel Finite Element Simulations of Laminar Hypersonic Flows}.'' {\em AIAA Journal}, 48(6):1025--1036, June 2010.
 
@@ -11,7 +15,7 @@ Benjamin S.~Kirk, {``A Multidimensional Thermal Analysis to Assess Modeling Erro
 
 \bibitem{ctwatch08}
 Kirk, B. S., Palmer, G., Tang, C., Wood, W. A., \href{http://www.ctwatch.org/quarterly/articles/2008/03/urgent-computing-in-support-of-space-shuttle-orbiter-reentry}{``Urgent Computing in Support of Space Shuttle Orbiter Reentry.''} {\em CTWatch Quarterly}, Volume 4, Number 1, March 2008.
-/
+
 \bibitem{fins_ijnmf}
 Benjamin S. Kirk, Graham F. Carey, \href{http://dx.doi.org/10.1002/fld.1635}{``Development and Validation of a SUPG Finite Element Scheme for the Compressible Navier-Stokes Equations using a Modified Inviscid Flux Discretization.''} {\em International Journal for Numerical Methods in Fluids}, 57(3):265--293, May 2008.
 

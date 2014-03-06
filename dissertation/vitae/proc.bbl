@@ -1,4 +1,7 @@
 \begin{thebibliography}{1}
+\bibitem{aiaa-2013-2559}
+  Benjamin S. Kirk, Roy H. Stogner, Todd A. Oliver and Paul T. Bauman, {``Recent Advancements in Fully Implicit Numerical Methods for Hypersonic Reacting Flows.''} {\em 21\textsuperscript{st} AIAA Computational Fluid Dynamics Conference}, AIAA Paper 2013-2559, Sam Diego, California, June 2013.
+
 \bibitem{aiaa-2013-306}
   Benjamin S. Kirk and Todd A. Oliver, {``Validation of SUPG Finite Element Simulations of Shockwave/Turbulent Boundary Layer Interactions in Hypersonic Flow.''} {\em 51\textsuperscript{st} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2013-306, Grapevine, Texas, January 2013.
 
@@ -7,15 +10,15 @@ Christopher Combs, Noel Clemens, Paul Danehy, Brett Bathel, Ron Parker, Tim Wadh
 
 \bibitem{aiaa-2011-3779}
   Paul Bauman, Jeremy Jagodzinski, and Benjamin Kirk, {``Statistical Calibration of Thermocouple Gauges Used for Inferring Heat Flux.''}  {\em 20\textsuperscript{th} AIAA Computational Fluid Dynamics Conference}, AIAA Paper 2011-3779, Honolulu, Hawaii, June 2011.
-  
+
 \bibitem{aiaa-2011-3841}
   Steven Bova and Benjamin Kirk, {``On the Preservation of Total Enthalpy in SUPG Methods.''} {\em 20\textsuperscript{th} AIAA Computational Fluid Dynamics Conference}, AIAA Paper 2011-3841, Honolulu, Hawaii, June 2011.
 
 \bibitem{aiaa-2011-144}
   Adam Amar, Nathan Calvert, and Benjamin Kirk, {``Development and Verification of the Charring Ablating Thermal Protection Implicit System Solver.''} {\em 49\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2011-144, Orlando, Florida, January 2011.
-  
+
 \bibitem{aiaa-2011-134}
-  Benjamin S. Kirk, Steven Bova, and Ryan Bond, {``A Streamline-Upwind Petrov-Galerkin Finite Element Scheme for Non-Ionized Hypersonic Flows in Thermochemical Nonequilibrium.''} {\em 49\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2011-134, Orlando, Florida, January 2011. 
+  Benjamin S. Kirk, Steven Bova, and Ryan Bond, {``A Streamline-Upwind Petrov-Galerkin Finite Element Scheme for Non-Ionized Hypersonic Flows in Thermochemical Nonequilibrium.''} {\em 49\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2011-134, Orlando, Florida, January 2011.
 
 \bibitem{aiaa-2010-1560}
 Steven Bova, Ryan Bond, and Benjamin S. Kirk, {``Stabilized Finite Element Scheme for High Speed Flows with Chemical Non-Equilibrium.''} {\em 48\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2010-1560, Orlando, Florida, January 2010.
@@ -38,7 +41,7 @@ D. Boger, R. Noack, A. Amar, B. Kirk, R. Lillard, and M. Olsen,
 
 \bibitem{aiaa-2007-603}
   J. Greathouse, B. Kirk, R. Lillard, T. Troung, P. Robinson, and C. Cerimele, {``Crew Exploration Vehicle (CEV) Crew Module shape selection analysis and CEV Aeroscience Project Overview.''} {\em 45\textsuperscript{th} AIAA Aerospace Sciences Meeting and Exhibit}, AIAA Paper 2007-603, Reno, Nevada, January 2007.
-  
+
 \bibitem{aiaa-2006-2922}
   Scott A. Berry, Thomas J. Horvath, Amy M. Cassady, Benjamin S. Kirk, K.C. Wang, and Andrew J. Hyatt, {``Boundary Layer Transition Results From STS-114.''}{\em 9\textsuperscript{th} AIAA/ASME Joint Thermophysics and Heat Transfer Conference}, AIAA Paper 2006-2922, San Francisco, CA, June 2006.
 
