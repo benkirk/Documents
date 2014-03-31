@@ -54,29 +54,34 @@ EOF
 
 fi
 
-# To update:
-# ----------
-#  cd /opt/local/var/macports/sources/svn.macports.org/trunk/dports/
-#  sudo svn up
-#  sudo port sync -d
-#  sudo port upgrade outdated
+# # To update:
+# # ----------
+# #  cd /opt/local/var/macports/sources/svn.macports.org/trunk/dports/
+# #  sudo svn up
+# #  sudo port sync -d
+# #  sudo port upgrade outdated
 
 
 # clang first - among other things, seesm to install ld64, and that helps
 # some more fragile ports work later
 port install clang-3.5 clang_select
-port select clang mp-clang-3.5
+
+port select --set clang mp-clang-3.5
+port select --set python python27
 
 port install emacs-app color-theme-mode.el
 
 # set the default gcc
 port install gcc48 gcc_select
-port select gcc mp-gcc48
+port select --set gcc mp-gcc48
 
 port install hdf5-18 +fortran +gcc48
 
 # mpi, latex, & development libraries
-port install openmpi tbb subversion git-core +svn  gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils texlive-bin-extra texlive-generic-recommended texlive-math-extra boost eigen3 scons gsl doxygen graphviz gsed dos2unix vtk5 cgal git-extras valgrind
+port install openmpi-gcc48 mpi_select
+port select --set mpi openmpi-gcc48-fortran
+
+port install tbb subversion git-core +svn  gmake autoconf automake libtool texlive-latex texlive-latex-extra texlive-latex-recommended bash bash-completion texlive-fonts-recommended texlive-fontutils texlive-bin-extra texlive-generic-recommended texlive-math-extra boost eigen3 scons gsl doxygen graphviz gsed dos2unix vtk5 cgal git-extras
 
 # petsc
 #port install petsc slepc
@@ -91,24 +96,31 @@ port install gnuplot
 #port install lua lua-luafilesystem luarocks
 #luarocks install luaposix
 
-port install synergy
+port install libcryptopp
+# port install synergy
 
 # octave and its packages
-#port install atlas +gcc48
-port install octave +accelerate +gcc48 -atlas
+port install atlas +gcc48
+port install octave +gcc48
 port install octave-general octave-gsl octave-io octave-linear-algebra octave-missing-functions octave-msh octave-optim octave-plot octave-specfun octave-splines octave-statistics octave-strings octave-struct octave-physicalconstants octave-odepkg
+
+# miscellaneous
+port install wget gdb
 
 # gimp & friends
 port install gimp2 gimp-print macfile-gimp macclipboard-gimp
 
 
-# make symbolic links to OpenMPI commands
 cd /opt/local/bin
-for file in mpirun mpicc mpicxx mpif77 mpif90 ; do
-    ln -s open$file $file ; ls -l $file
-done
+# # make symbolic links to MPI commands
+# for file in mpiexec mpicc mpicxx mpif77 mpif90 ; do
+#     ln -sf $file-openmpi-mp $file ; ls -l $file
+# done
+# ln -sf mpiexec mpirun
+
 # prefer some macports commands
 ln -s gmake make && ls -l make
+ln -s ggdb gdb   && ls -l gdb
 cd -
 
 # octave installs liblapack.a, which breaks petsc
