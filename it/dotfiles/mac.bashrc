@@ -43,14 +43,14 @@ export OMPI_F77=/opt/local/bin/gfortran
 # PETSc
 #########################################
 #export PETSC_DIR=/opt/local/lib/petsc
-export PETSC_DIR=/usr/local/petsc/3.4.2
+export PETSC_DIR=/usr/local/petsc/3.5.2
 export PETSC_ARCH=macosx
-export SLEPC_DIR=/usr/local/slepc/3.4.2
+export SLEPC_DIR=/usr/local/slepc/3.5.1
 
 #########################################
 # Trilinos
 #########################################
-export TRILINOS_DIR=/usr/local/trilinos/11.4.1
+export TRILINOS_DIR=/usr/local/trilinos/11.10.2
 export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
 
 #########################################
@@ -61,7 +61,7 @@ export DYLD_LIBRARY_PATH=$CANTERA_DIR/lib:$DYLD_LIBRARY_PATH
 
 export MASA_DIR=/Users/benkirk/codes/fins/contrib/install
 export ABLATION_DIR=$MASA_DIR
-export GSI_DIR=$MASA_DIR
+export GSI_DIR=/Users/benkirk/codes/install/gsi
 #export GRVY_DIR=$MASA_DIR
 
 #########################################
@@ -88,7 +88,8 @@ export FINS_USER_OPTIONS="-ksp_right_pc -ksp_converged_reason"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
 export MASA_DIR=$FINS_STABLE_ROOT/contrib/install
 # export ABLATION_DIR=$FINS_ROOT/contrib/install
-export LIBMESH_ROOT=/usr/local/libmesh/0.9.2.2
+#export LIBMESH_ROOT=/usr/local/libmesh/0.9.3-rc1
+export LIBMESH_ROOT=/usr/local/libmesh/1.0.0-pre
 export LIBMESH_DIR=$LIBMESH_ROOT
 PATH=$LIBMESH_ROOT/contrib/bin:$PATH
 
