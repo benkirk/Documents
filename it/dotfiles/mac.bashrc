@@ -1,7 +1,7 @@
 #########################################
 # Modify environment
 #########################################
-PS1="elfboy(\#)$ "
+PS1="\$USER@elfboy(\#)$ "
 
 # Pretty ls colors for light text on dark background
 export LSCOLORS="Bxfxcxdxcxegedabagacad"
@@ -11,7 +11,7 @@ bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
 
-PATH=/Applications/paraview.app/Contents/MacOS:/Applications/Tec360_2012r1/bin:$PATH
+PATH=/Applications/paraview.app/Contents/MacOS:$PATH
 
 
 #########################################
@@ -23,7 +23,9 @@ export BOOST_ROOT=$BOOST_DIR
 #########################################
 # Tecplot
 #########################################
-PATH=/Applications/Tec360_2010/bin:$PATH
+#PATH=/Applications/Tecplot\ 360\ EX\ 2015\ R2/Tecplot\ 360\ EX\ 2015\ R2.app/Contents/MacOS:$PATH
+PATH=/Applications/Tecplot\ 360\ EX\ 2017\ R1/Tecplot\ 360\ EX\ 2017\ R1.app/Contents/MacOS:$PATH
+alias tec360="/Applications/Tecplot\ 360\ EX\ 2017\ R1/Tecplot\ 360\ EX\ 2017\ R1.app/Contents/MacOS/Tecplot\ 360\ EX\ 2017\ R1"
 
 #########################################
 # Intel TBB
@@ -43,31 +45,26 @@ export OMPI_F77=/opt/local/bin/gfortran
 # PETSc
 #########################################
 #export PETSC_DIR=/opt/local/lib/petsc
-export PETSC_DIR=/usr/local/petsc/3.5.2
+export PETSC_DIR=/opt/aerolab/petsc/3.7.3
 export PETSC_ARCH=macosx
-export SLEPC_DIR=/usr/local/slepc/3.5.1
+#export SLEPC_DIR=/usr/local/slepc/3.5.2
 
-#########################################
-# Trilinos
-#########################################
-export TRILINOS_DIR=/usr/local/trilinos/11.10.2
-export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
+# #########################################
+# # Trilinos
+# #########################################
+# export TRILINOS_DIR=/usr/local/trilinos/11.10.2
+# export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
 
 #########################################
 # Cantera & friends
 #########################################
-export CANTERA_DIR=/usr/local/cantera/2.0.2
+export CANTERA_DIR=/opt/aerolab/cantera/2.2.0
 export DYLD_LIBRARY_PATH=$CANTERA_DIR/lib:$DYLD_LIBRARY_PATH
 
 export MASA_DIR=/Users/benkirk/codes/fins/contrib/install
-export ABLATION_DIR=$MASA_DIR
-export GSI_DIR=/Users/benkirk/codes/install/gsi
+#export ABLATION_DIR=$MASA_DIR
+#export GSI_DIR=/Users/benkirk/codes/install/gsi
 #export GRVY_DIR=$MASA_DIR
-
-#########################################
-# GMV
-#########################################
-PATH=/usr/local/gmv:$PATH
 
 
 ###############################################################################
@@ -88,8 +85,7 @@ export FINS_USER_OPTIONS="-ksp_right_pc -ksp_converged_reason"
 # export GRVY_DIR=$FINS_ROOT/contrib/install
 export MASA_DIR=$FINS_STABLE_ROOT/contrib/install
 # export ABLATION_DIR=$FINS_ROOT/contrib/install
-#export LIBMESH_ROOT=/usr/local/libmesh/0.9.3-rc1
-export LIBMESH_ROOT=/usr/local/libmesh/1.0.0-pre
+export LIBMESH_ROOT=/opt/aerolab/libmesh/1.2.0
 export LIBMESH_DIR=$LIBMESH_ROOT
 PATH=$LIBMESH_ROOT/contrib/bin:$PATH
 
@@ -150,10 +146,16 @@ function use_xcode_only {
 
 PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-
-if (test -f $HOME/codes/libmesh.benkirk/contrib/autotools/bin/automake); then
-    PATH=$HOME/codes/libmesh.benkirk/contrib/autotools/bin:$PATH
+if (test -d $HOME/codes); then
+    export CODES=$HOME/codes
+    if (test -d $CODES/dplr); then
+        export DPLR_HOME=$CODES/dplr
+    fi
+    if (test -f $CODES/libmesh/contrib/autotools/bin/automake); then
+        PATH=$CODES/libmesh/contrib/autotools/bin:$PATH
+    fi
 fi
+
 
 # Local Variables:
 # mode: shell-script
