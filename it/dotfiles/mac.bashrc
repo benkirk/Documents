@@ -33,19 +33,24 @@ alias tec360="/Applications/Tecplot\ 360\ EX\ 2017\ R1/Tecplot\ 360\ EX\ 2017\ R
 export TBB_DIR=/opt/local
 
 #########################################
+# HDF5
+#########################################
+export HDF5_DIR=/opt/local
+
+#########################################
 # MPI
 #########################################
-export libmesh_CXXFLAGS="-DOMPI_SKIP_MPICXX"
-export OMPI_CC=/opt/local/bin/gcc
-export OMPI_CXX=/opt/local/bin/g++
-export OMPI_FC=/opt/local/bin/gfortran
-export OMPI_F77=/opt/local/bin/gfortran
+# export libmesh_CXXFLAGS="-DOMPI_SKIP_MPICXX"
+# export OMPI_CC=/opt/local/bin/gcc
+# export OMPI_CXX=/opt/local/bin/g++
+# export OMPI_FC=/opt/local/bin/gfortran
+# export OMPI_F77=/opt/local/bin/gfortran
 
 #########################################
 # PETSc
 #########################################
 #export PETSC_DIR=/opt/local/lib/petsc
-export PETSC_DIR=/opt/aerolab/petsc/3.7.3
+export PETSC_DIR=/opt/aerolab/petsc/3.8.4
 export PETSC_ARCH=macosx
 #export SLEPC_DIR=/usr/local/slepc/3.5.2
 
