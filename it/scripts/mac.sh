@@ -54,56 +54,6 @@ port install gnuplot || exit 1
 
 # misc catchall
 port install \
-     wget gawk glpk || exit 1
+     wget gawk glpk gnutar || exit 1
 
 exit 0
-
-# #port -d sync
-
-
-
-
-# # lua and requisites for lmod
-# #port install lua lua-luafilesystem luarocks
-# #luarocks install luaposix
-
-# port install libcryptopp || exit 1
-# #port install synergy
-
-# # miscellaneous
-# port install wget gdb || exit 1
-
-# # sshfs
-# port install sshfs sshfs-gui || exit 1
-
-# #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# # TODO: not working for 10.10 & XCode 6.4 & macports 2.3.3
-
-# # gimp & friends
-# port install gimp gimp-print macfile-gimp macclipboard-gimp || exit 1
-
-# # octave and its packages
-# port install octave +accelerate || exit 1
-# port install octave-io octave-linear-algebra octave-missing-functions octave-msh octave-optim octave-plot octave-specfun octave-splines octave-statistics octave-strings octave-struct octave-miscellaneous octave-odepkg || exit 1
-
-# #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-# cd /opt/local/bin
-# # # make symbolic links to MPI commands
-# # for file in mpiexec mpicc mpicxx mpif77 mpif90 ; do
-# #     ln -sf $file-openmpi-mp $file ; ls -l $file
-# # done
-# # ln -sf mpiexec mpirun
-
-# # prefer some macports commands
-# ln -s gmake make && ls -l make
-# ln -s ggdb gdb   && ls -l gdb
-# cd -
-
-# # # octave installs liblapack.a, which breaks petsc
-# # # get the system ones here too
-# # cd /opt/local/lib
-# # ln -s /usr/lib/libblas.dylib   && ls -l libblas.dylib
-# # ln -s /usr/lib/liblapack.dylib && ls -l liblapack.dylib
-# # cd -
