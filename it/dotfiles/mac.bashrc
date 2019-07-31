@@ -49,8 +49,7 @@ export HDF5_DIR=/opt/local
 #########################################
 # PETSc
 #########################################
-#export PETSC_DIR=/opt/local/lib/petsc
-export PETSC_DIR=/opt/aerolab/petsc/3.8.4
+export PETSC_DIR=/opt/aerolab/petsc/3.10.5
 export PETSC_ARCH=macosx
 #export SLEPC_DIR=/usr/local/slepc/3.5.2
 
@@ -61,15 +60,15 @@ export PETSC_ARCH=macosx
 # export DYLD_LIBRARY_PATH=$TRILINOS_DIR/lib:$DYLD_LIBRARY_PATH
 
 #########################################
-# Cantera & friends
-#########################################
-export CANTERA_DIR=/opt/aerolab/cantera/2.2.0
-export DYLD_LIBRARY_PATH=$CANTERA_DIR/lib:$DYLD_LIBRARY_PATH
+# # Cantera & friends
+# #########################################
+# export CANTERA_DIR=/opt/aerolab/cantera/2.2.0
+# export DYLD_LIBRARY_PATH=$CANTERA_DIR/lib:$DYLD_LIBRARY_PATH
 
-export MASA_DIR=/Users/benkirk/codes/fins/contrib/install
-#export ABLATION_DIR=$MASA_DIR
-#export GSI_DIR=/Users/benkirk/codes/install/gsi
-#export GRVY_DIR=$MASA_DIR
+# export MASA_DIR=/Users/benkirk/codes/fins/contrib/install
+# #export ABLATION_DIR=$MASA_DIR
+# #export GSI_DIR=/Users/benkirk/codes/install/gsi
+# #export GRVY_DIR=$MASA_DIR
 
 
 ###############################################################################
