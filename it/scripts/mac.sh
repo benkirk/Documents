@@ -29,6 +29,14 @@ port -N install \
      py27-requests py37-requests \
     || exit 1
 
+# Jupyter & Pandoc
+port -N install \
+     py{27,36,37}-jupyterlab \
+     py{27,36,37}-jupyter \
+     py{27,36,37}-pandocfilters pandoc \
+    || exit 1
+
+# MPI
 port -N install \
      openmpi-default mpich-default \
      openmpi-gcc8 mpich-gcc8 mpi_select || exit 1
