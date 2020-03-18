@@ -13,10 +13,11 @@ port -N install clang-8.0 clang-7.0 clang_select || exit 1
 port -N select --set clang mp-clang-8.0
 port -N select --set python2 python27
 
-port -N install gcc8 gcc7 gcc_select || exit 1
-port -N select --set gcc mp-gcc8
+port -N install gcc9 gcc8 gcc7 gcc_select || exit 1
+port -N select --set gcc mp-gcc9
 
-port -N install hdf5 +gcc8 +fortran || exit 1
+#port -N install hdf5 +gcc9 +fortran || exit 1
+port -N install hdf5 || exit 1
 
 # mpi4py, will bring in python37 and mpi-default
 port -N install py27-mpi4py py37-mpi4py || exit 1
@@ -31,15 +32,15 @@ port -N install \
 
 # Jupyter & Pandoc
 port -N install \
-     py{27,36,37}-jupyterlab \
-     py{27,36,37}-jupyter \
-     py{27,36,37}-pandocfilters pandoc \
+     py37-jupyterlab \
+     py37-jupyter \
+     py37-pandocfilters pandoc \
     || exit 1
 
-# MPI
-port -N install \
-     openmpi-default mpich-default \
-     openmpi-gcc8 mpich-gcc8 mpi_select || exit 1
+# # MPI
+# port -N install \
+#      openmpi-default mpich-default \
+#      openmpi-gcc9 mpich-gcc9 mpi_select || exit 1
 
 
 port -N install \
