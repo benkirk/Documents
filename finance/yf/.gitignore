@@ -1,5 +1,8 @@
+#*#
 *.pdf
 *~
-plots.py
 .#*
-#*#
+.ipynb_checkpoints/
+etfs.py
+plots.py
+tsp_shareprices.xls
