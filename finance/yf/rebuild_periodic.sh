@@ -5,7 +5,7 @@
 ofile=tsp_shareprices.xls
 
 # Make all if ${ofile} does not exist
-[ -f ${ofile} ] || make all
+[ -f ${ofile} ] || make ${ofile}
 
 # If a recent ${ofile} exists, bail
 t_min=$((10 * 1))
