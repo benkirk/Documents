@@ -1,3 +1,9 @@
+all:
+	$(MAKE) etfs.py plots.py
+
+tsp_shareprices.xls: plots.ipynb
+	rm -f plots.py
+	$(MAKE) plots.py
 
 %.py : %.ipynb Makefile
 	jupyter-3.7 nbconvert --to=notebook --clear-output $< >/dev/null
