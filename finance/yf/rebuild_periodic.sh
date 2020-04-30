@@ -8,7 +8,7 @@ ofile=tsp_shareprices.xls
 [ -f ${ofile} ] || make all
 
 # If a recent ${ofile} exists, bail
-t_min=$((5 * 1))
+t_min=$((10 * 1))
 ffile="$(find . -type f -mmin -${t_min} -name ${ofile} -print)"
 
 #echo $ffile
