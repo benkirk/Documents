@@ -12,7 +12,7 @@ tsp_shareprices.xls: plots.ipynb
 	chmod +x $@
 
 clean:
-	rm -f *.pdf
+	rm -f *.pdf *.out tsp_shareprices.xls
 
 clobber:
 	$(MAKE) clean

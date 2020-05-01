@@ -2,6 +2,8 @@
 
 #set -x
 
+export PATH=/opt/local/bin:$PATH
+
 ofile=tsp_shareprices.xls
 
 # Make all if ${ofile} does not exist
@@ -16,7 +18,8 @@ ffile="$(find . -type f -mmin -${t_min} -name ${ofile} -print)"
 
 [ "x${ffile}" == "x./${ofile}" ] &&  { echo -n "Recent ${ffile}: " ; ls -l ${ffile}; exit 0; }
 
-echo "No recent ${ofile}"
+echo "No recent ${ofile}" | tee build.out
 rm -f ${ofile}
-make ${ofile}
+make ${ofile} | tee -a build.out
+
 exit 0
