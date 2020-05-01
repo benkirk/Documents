@@ -7,3 +7,4 @@ etfs.py
 plots.py
 tsp_shareprices.xls
 *.out
+cache*.sqlite
