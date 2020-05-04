@@ -1,9 +1,9 @@
 all:
 	$(MAKE) etfs.py plots.py
 
-tsp_shareprices.xls: plots.ipynb
-	rm -f plots.py
-	$(MAKE) plots.py
+tsp_shareprices.xls: data.ipynb
+	rm -f data.py
+	$(MAKE) data.py
 	[ -f tsp_shareprices.xls ] && cp tsp_shareprices.xls ~/Downloads/
 
 %.py : %.ipynb Makefile
