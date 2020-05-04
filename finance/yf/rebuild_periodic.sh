@@ -18,7 +18,8 @@ ffile="$(find . -type f -mmin -${t_min} -name ${ofile} -print)"
 
 [ "x${ffile}" == "x./${ofile}" ] &&  { echo -n "Recent ${ffile}: " ; ls -l ${ffile}; exit 0; }
 
-echo "No recent ${ofile}" | tee build.out
+date > build.out
+echo "No recent ${ofile}" | tee -a build.out
 rm -f ${ofile}
 make ${ofile} | tee -a build.out
 
