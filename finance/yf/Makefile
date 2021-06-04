@@ -1,10 +1,10 @@
 all:
 	$(MAKE) etfs.py plots.py
 
-tsp_shareprices.xls: data.ipynb
+tsp_shareprices.xlsx: data.ipynb
 	rm -f data.py
 	$(MAKE) data.py
-	[ -f tsp_shareprices.xls ] && cp tsp_shareprices.xls ~/Downloads/
+	[ -f tsp_shareprices.xlsx ] && cp tsp_shareprices.xlsx ~/Downloads/
 
 %.py : %.ipynb Makefile
 	jupyter-3.7 nbconvert --to=notebook --clear-output $< >/dev/null
@@ -12,7 +12,7 @@ tsp_shareprices.xls: data.ipynb
 	chmod +x $@
 
 clean:
-	rm -f *.pdf *.out tsp_shareprices.xls
+	rm -f *.pdf *.out tsp_shareprices.xlsx
 
 clobber:
 	$(MAKE) clean

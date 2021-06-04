@@ -5,7 +5,7 @@
 .ipynb_checkpoints/
 etfs.py
 plots.py
-tsp_shareprices.xls
+tsp_shareprices.xlsx
 *.out
 cache*.sqlite
 iplots.py

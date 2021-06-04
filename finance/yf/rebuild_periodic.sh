@@ -4,7 +4,7 @@
 
 export PATH=/opt/local/bin:$PATH
 
-ofile=tsp_shareprices.xls
+ofile=tsp_shareprices.xlsx
 
 # Make all if ${ofile} does not exist
 [ -f ${ofile} ] || make ${ofile}

@@ -7,4 +7,4 @@ nbf=plots.ipynb
                              ${nbf} >/dev/null
 
 ls -ltrh
-ls -ltrh ~/Downloads/tsp_shareprices.xls
+ls -ltrh ~/Downloads/tsp_shareprices.xlsx
