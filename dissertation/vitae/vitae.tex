@@ -1,6 +1,8 @@
 \documentclass[10pt]{report}
 
-\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{ebgaramond}
+%\usepackage{times}
 \usepackage{layout}
 \usepackage{multibib}
 \usepackage[ManyBibs,openbib]{currvita}
@@ -48,15 +50,23 @@ pdfsubject={Vitae}
   \vspace{-0.5em}
   \hskip-1.5em
   \begin{minipage}[h]{.5\textwidth}
-    Born January 26, 1978 \\
-    \href{mailto:benjamin.kirk@nasa.gov}{\texttt{benjamin.kirk(at)nasa.gov}} \\
+    %Born January 26, 1978 \\
+    \href{mailto:benjamin.kirk@nasa.gov}{\texttt{benjamin.kirk@nasa.gov}} \\
+    \href{mailto:benjamin.s.kirk@gmail.com}{\texttt{benjamin.s.kirk@gmail.com}} \\
+    \url{https://www.linkedin.com/in/benjamin-kirk-87784a14} \\
   \end{minipage}
   \hskip .275\textwidth
+  %% \begin{minipage}[h]{.25\textwidth}
+  %%   \setlength{\parindent}{0pt}
+  %%   2101 NASA Parkway \\
+  %%   Mail Code: EG3 \\
+  %%   Houston, TX 77058 \\
+  %%   832.221.7467 \\
+  %% \end{minipage}
   \begin{minipage}[h]{.25\textwidth}
     \setlength{\parindent}{0pt}
-    2101 NASA Parkway \\
-    Mail Code: EG3 \\
-    Houston, TX 77058 \\
+    1532 Torrance Drive \\
+    League City, TX 77573 \\
     832.221.7467 \\
   \end{minipage}
 
@@ -65,65 +75,117 @@ pdfsubject={Vitae}
     \currentpdfbookmark{Education}{education}
     \item[6/2002 -- 5/2007]
       Ph.D.\ Aerospace Engineering,
-      The University of Texas at Austin. %GPA: 3.94
+      The University of Texas at Austin. GPA: 3.94
 
       Thesis: \href{http://cfdlab.ae.utexas.edu/~benkirk/dissertation.pdf}{\emph{Adaptive Finite Element Simulation of Flow and Transport Applications on Parallel Computers}}, May 2007.
     \item[8/2000 -- 5/2002]
       Masters of Science, Computational and Applied Mathematics,
-      The University of Texas at Austin.  %GPA: 3.93
+      The University of Texas at Austin.  GPA: 3.93
     \item[8/1996 -- 5/2000]
       Bachelors of Science, Aerospace Engineering,
-      The University of Texas at Austin.  %GPA: 4.0
-  \end{cvlist}
-
-  \vspace{-.5em}
-% Research Interests
-  \begin{cvlist}{Research Interests}
-    \currentpdfbookmark{Research Interests}{research}
-    \item[Computational Fluid Dynamics] \mbox{ }
-      \begin{itemize}
-        %\small
-        \item[-] Numerical simulation of hypersonic, thermochemical nonequilibrium flows.
-        \item[-] Coupled multiphysics simulation of ablating reentry vehicles.
-        \item[-] Stabilized finite element methods for convective-dominated flows.
-        \item[-] Numerical methods for biomedical applications.
-        \item[-] Fluid-structure interaction.
-      \end{itemize}
-    \item[High-Performance Computing] \mbox{ }
-      \begin{itemize}
-        %\small
-        \item[-] Numerical methods for massively parallel adaptive mesh refinement simulations.
-        \item[-] Multilevel parallel algorithm development and implementation.
-        \item[-] High-performance computing library design and development.
-      \end{itemize}
+      The University of Texas at Austin.  GPA: 4.0
   \end{cvlist}
 
   \vspace{-.5em}
 % Work Experience
   \begin{cvlist}{Work Experience}
     \currentpdfbookmark{Work Experience}{work}
-    \item[6/2013 -- Present]
-      Deputy Chief, Applied Aerosciences \& Computational Fluid Dynamics Branch
+  \item[10/2015 -- Present]
+    Chief, Applied Aerosciences \& Computational Fluid Dynamics Branch,  NASA Lyndon B. Johnson Space Center
+  \item[8/2018-2/2019]
+    Acting Chief, Aeroscience \& Flight Mechanics Division (\emph{rotational assignment})
+  \item[6/2013 -- 10/2015]
+    Deputy Chief, Applied Aerosciences \& Computational Fluid Dynamics Branch
+    \begin{itemize}
+    \item
+      Technical Authority \& Stewardship of the Aerosicence Disciplines -- Aerodynamics, Aerothermodynamics, Rarefied Gas Dynamics, and Parachute/Decelerator Systems -- for application within NASA's Human Spaceflight Programs.
+    \item
+      Led the Applied Aerosciences \& Computational Fluid Dynamics Branch through multiple programmatic milestones important to NASA's Human Spaceflight Programs, including development \& certification of multiple flight vehicles through direct support of multiple flight tests with in the Orion and Commercial Crew Programs, as well as sustained support for the International Space Station.
 
-    \item[12/2003 -- Present]
-      Aerospace Engineer, NASA Lyndon B.\ Johnson Space Center, Aeroscience \& Flight Mechanics Division, Applied Aeroscience \& CFD Branch.
+      Notable Milestones Achieved:
+      \begin{itemize}
+      \item Orion Program's Exploration Flight Test, Ascent Abort Flight Test, Artemis~1 flight readiness.
+      \item Commercial Crew Program's development and qualification activities, from inception through SpaceX Crew~3 flight readiness.
+      \item International Space Station operations \& certification of multiple new `visiting vehicles` and associated plume-induced aerothermodynamic environment characterization.
+      \end{itemize}
+
+    \item
+      Strategic planning \& execution of technical work content across a combined government \& contractor workforce of $\approx$35 individuals, with direct responsibility for $\approx$\$10M annual operating budget.
+
+    \item
+      Principal responsibilities for employee recruitment, work assignments, and daily management activities.
+    \end{itemize}
+
+
+  \item[12/2003 -- Present]
+    High Performance Computing (HPC) Chief Lab Architect \& System Administrator
+    \begin{itemize}
+      \item
+        Established the governance \& operating model for NASA JSC's Flight  Sciences Lab (FSL), including the FSL User Forum (FUF), with the primary goals of:
+        \begin{itemize}
+        \item
+          Leveraging background as both an HPC system user and administrator to `translate' between these two communities, with focus on explaining the technical `why` and offering `how` in a user-centric approach. The overarching goal of this thrust was to promote mutual understanding of technical needs and challenges, foster mutual respect, and increase overall system performance and user satisfaction.
+        \item
+          Bridging the knowledge gap between System Users and System Administrators, through focused technology training, code profiling and optimization, workflow process enhancements, and technology deep-dives (e.g. MPI, Lmod modules, Luste, NFS, ZFS \& NFS).
+        \item
+          Optimally matching compute and filesystem resources with user application needs, for example, judiciously choosing between Lustre, NFS, and local storage options based on detailed profiling of user applications.  Balancing compute resource CPU and memory resources to optimally accommodate primary analysis codes in a cost-efficient manner.
+        \item
+          Managing system operations with user input and influence; balancing required maintenance activities with user deadlines.
+        \item
+          Implementing governance model \& processes for dispositoning system reservations and special access requirements.
+        \end{itemize}
+      \item
+        Primary Architect for the CFDLab (UT Austin), Aerolab, and Flight Sciences Labs (NASA/JSC) high-performance computing Linux environments. Led system life-cycle from procurement, through deployment, to operations and retirement for our network, storage, compute, and workstation hardware.
+    \begin{itemize}
+      \item
+        Architected 3 generations of Lustre Filesystems, from 2007 to present.  Selected all server components, MDS/OSS width and depth balance, storage subsystem configuration \& tuning, deployment, operations, and retirement.  Production Lustre experience ranges from v1.6 to v2.14, in a multi-homed InfiniBand/40GbE network environment, including both \texttt{ldiskfs} \& ZFS MDT \& OST technologies, and active/active (MDT) \& active/passive (OST) failover pairing.
+      \item
+	Architected/selected 7 generations of Linux clusters, from 2000 to present.  Experience dates from very early ‘Beowulf’ 16-node clusters, to (currently) multiple InfiniBand-connected HPE ICE-X/XA systems \& federated under a single SLURM interface with a companion Supermicro blade cluster.
+      \item
+	Architected a distributed lab environment across the NASA/JSC campus, including network and workstation selection, enabling users’ desktop \& software environment to seamlessly match centralized HPC resources, including mounting the same home and Lustre filesystems.  This provided a significant efficiency for our use cases, where large files are often required for pre- and post-processing of analyses.  Users can develop inputs for PDE analysis directly on the HPC filesystem, and post-process in the same global workspace.  Importantly, data transfer for HPC staging was largely eliminated in this setting.
+    \end{itemize}
+
+  \item
+    HPC Systems Administrator with primary responsibility for multiple Lustre, ZFS, NFS, and DMF filesystems, multiple Linux Compute clusters, high-performance end-user workstations, and the software environment for 200+ users.
+    \begin{itemize}
+    \item
+      Responsible for maintenance \& operations of Lustre filesystems, including development of custom monitoring tools for use by users and in Ganglia-based diagnostics.  For example, aggregate Lustre Jobstats \& SLURM job information to quickly identify workflows with unusual metadata requirements, bandwidth usage, or both.  Integrated Robinhood-based usage statistics for rapid user filesystem usage information.
+    \item
+      Developed \& maintained the common, user-facing HPC software environment on multiple Linux systems.  This singly-homed software environment supported 3 clusters and end-user workstations simultaneously, using the \href{https://lmod.readthedocs.io/en/latest}{Lmod Lua module environment} in order to provide transparent support to multiple compiler suites, Python versions, MPI variants (OpenMPI, MPICH, MVAPICH, and HPE/MPT), and requisite development library software stacks simultaneously.
+    \item
+      Developed utilities for efficiently dispatching and aggregating Monte-Carlo workflows on HPC systems in a Lustre environment, using an extensible Py4MPI interface, performing local I/O to \texttt{tmpfs}-based filesystems, and aggregating large-scale results to a shared Lustre filesystem. The approach allows for separating small file access from the Lustre filesystem wherever practicable, archiving results instead in a small number of large files.
+    \end{itemize}
+  \item
+    HPC Systems User as a finite element \& computational fluid dynamics subject matter expert.
+    \begin{itemize}
+    \item
+      Primary developer of the \href{(http://libmesh.github.io)}{libMesh parallel adaptive framework} (2002-2017), a C++/MPI framework for solving partial differential equations with the finite element method.
+    \item
+      Hypersonic Aerothermodynamics specialist in support of NASA’s human spaceflight. Developed design databases for numerous spacecraft designs through performing large-scale CFD simulations across a wide range of computing resources and interface, including NASA’s High-end Computing \emph{Columbia} and \emph{Pleiades}, and multiple generations of HPC resources at the Texas Advanced Computing Center (TACC).  Involved the orchestration, execution, and delivery of 1000's of individual HPC simulations at discrete flight configurations.  Required the development of tools to manage multiple batch processes simultaneously in disparate queueing environments at multiple HPC sites.
+    \end{itemize}
+  \end{itemize}
+
+
+
+  \item[12/2003 -- 6/2013]
+    Aerospace Engineer, NASA Lyndon B.\ Johnson Space Center, Aeroscience \& Flight Mechanics Division, Applied Aeroscience \& CFD Branch
       %\small
       \begin{itemize}
-        \item[-]
+        \item
           Advanced modeling and simulation technology development for simulation of ablating reentry vehicles.
 
-        \item[-]
+        \item
           Aerothermodynamic analysis lead in support of Orion Crew Module design.
-        \item[-]
+        \item
           Supported Orion thermal protection system design by developing aerothermodynamic
           design environments and overall system requirements.
-        \item[-]
+        \item
           Designed and executed high-enthalpy wind tunnel and arc-jet tests to provide
           vehicle design information and validation data for computational methods.
-        \item[-]
+        \item
           Served as aerosciences lead for Space Shuttle Orbiter Reinforced Carbon/Carbon (RCC)
           repair activities.
-        \item[-]
+        \item
           Member of the Damage Assessment Team in support of the Space Shuttle Program
           during STS-114--STS-123.  Supported EVAs to execute thermal protection system
           repair during STS-114 and -117.
@@ -134,16 +196,16 @@ pdfsubject={Vitae}
       Research Assistant and System Administrator, The University of Texas at Austin
       %\small
       \begin{itemize}
-	\item[-]
+	\item
 	  Parallel algorithm research and development for adaptive,
 	  coupled fluid mechanics and heat transfer applications.
-	\item[-]
+	\item
 	  Led an international software development effort to produce
           a \href{http://libmesh.sourceforge.net}{finite element framework}
 	  for high performance parallel computing platforms.
-	\item[-]
+	\item
 	  Research microgravity fluid mechanics using CFD.
-	\item[-]
+	\item
 	  Administer a heterogeneous UNIX network.
       \end{itemize}
       %\normalsize
@@ -152,22 +214,45 @@ pdfsubject={Vitae}
       %%   Temporary Professional Co-Op, Lockheed Martin Space Mission Systems \& Services
       %%   \small
       %%   \begin{itemize}
-      %%     \item[-]
+      %%     \item
       %%       Researched feasibility of the human exploration of Mars.
-      %%     \item[-]
+      %%     \item
       %%       Created programs to analyze Space Shuttle plume heating to the
       %%       International Space Station.
-      %%     \item[-]
+      %%     \item
       %%       Conducted multiphase, chemically reacting supersonic flow analysis
       %%       of rocket engines.
-      %%     \item[-]
+      %%     \item
       %%       Upgraded and documented an orbital debris reentry simulation program for
       %%       a major revision release.
-      %%     \item[-]
+      %%     \item
       %%       Generated and analyzed three dimensional grids for hypersonic reentry
       %%       vehicles in chemical and thermal non-equilibrium flow regimes.
       %%   \end{itemize}
       %%   \normalsize
+  \end{cvlist}
+
+  \vspace{-.5em}
+% Research Interests
+  \begin{cvlist}{Research Interests}
+    \currentpdfbookmark{Research Interests}{research}
+    \item[High-Performance Computing] \mbox{ }
+      \begin{itemize}
+        %\small
+        \item[-] Numerical methods for massively parallel adaptive mesh refinement simulations.
+        \item[-] Multilevel parallel algorithm development and implementation.
+        \item[-] High-performance computing library design and development.
+        \item[-] High-performance computing systems design \& architecture.
+      \end{itemize}
+    \item[Computational Fluid Dynamics] \mbox{ }
+      \begin{itemize}
+        %\small
+        \item[-] Numerical simulation of hypersonic, thermochemical nonequilibrium flows.
+        \item[-] Coupled multiphysics simulation of ablating reentry vehicles.
+        \item[-] Stabilized finite element methods for convective-dominated flows.
+        \item[-] Numerical methods for biomedical applications.
+        \item[-] Fluid-structure interaction.
+      \end{itemize}
   \end{cvlist}
 
 % Honors & Awards
@@ -315,7 +400,8 @@ pdfsubject={Vitae}
     % Short Courses
     \subpdfbookmark{Short Courses}{shortcourses}
     \bibliographystyleconf{ieeetr}
-    \nociteshortcourses{prace13,                                              %% 2013
+    \nociteshortcourses{hypersonics21,                                        %% 2021
+                        prace13,                                              %% 2013
                         arl08,                                                %% 2008
                         erdc07,                                               %% 2007
                         fe_jsc04,wpafb04,                                     %% 2004
@@ -379,6 +465,12 @@ pdfsubject={Vitae}
 	\end{enumerate}
   \end{cvlist}
 
+% Skills
+  \begin{cvlist}{Tools \& Skills}
+    \item[]
+    Lustre architecting \& operations, HPC Linux Administration \& Power User Practitioner. SLURM configuration \& batch queuing operations. Message-passing \& thread-based parallelism. MPI application development \& optimization. NFS, ZFS, \& High-availability technologies. CentOS deployment and operations (bare metal and virtualized). HPE/SGI ICE-X/XA cluster deployment and operations. HPC Applications development, support, porting, optimization, and debugging. Fluent in bash, C++, Python, \LaTeX{}, GNU Autotools, git/svn, emacs, and English. Applied Mathematics. Finite Element Analysis. Technical leadership and communication. Personnel Management. Aerodynamics, Aerothermodynamics, Parachute/Decelerator Systems. Spacecraft Design, Development, Test, \& Engineering.
+  \end{cvlist}
+
 
 
 {\hfill \hrule\hfill\vspace{.1mm} \\}
@@ -386,4 +478,10 @@ pdfsubject={Vitae}
 
 \end{document}
 
-% LocalWords:  hypersonic
+% LocalWords:  hypersonic Aeroscience HPC Architected Lustre MDS OSS
+% LocalWords:  Filesystems InfiniBand GbE ldiskfs ZFS OST failover XA
+% LocalWords:  HPE SLURM Supermicro JSC filesystems pre PDE NFS DMF
+% LocalWords:  filesystem Jobstats Robinhood Lmod Lua MPI OpenMPI MPT
+% LocalWords:  MPICH MVAPICH Py tmpfs libMesh Aerothermodynamics CFD
+% LocalWords:  TACC queueing Aerosciences Aerosicence SpaceX
+% LocalWords:  aerothermodynamic
