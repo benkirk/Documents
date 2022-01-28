@@ -1,0 +1,120 @@
+########################################################################
+# Common Environment Variables (Override if necessary)
+
+#CDPATH=".:~:/nobackup/$USER"
+export EDITOR=emacs
+
+HOST=`hostname`
+METHOD='opt'; export METHOD
+METHOD_TITLE='o'
+PS_FLAGS=aux
+PWD_CMMD=pwd
+RSYNC_RSH=ssh
+
+export TECPHYFILE=/dev/null
+
+PATH=/sbin:/usr/sbin:$PATH
+
+CODES=/nobackup/benkirk/codes
+
+#
+# Custom config on certain machines
+#
+case "$AEROLAB_SYSTEM_CLASS" in
+
+    fsl|*workstations)
+        module try-load \
+            cantera \
+            anaconda \
+            >/dev/null 2>&1
+
+        module load \
+            -openmpi +openmpi/latest \
+	    -autotools +autotools/1.2 \
+            -texlive +texlive/2016 \
+	     dplr \
+             >/dev/null 2>&1
+
+        module try-load \
+            mpi4py/3.0.1-python${PYTHON_VERSION} \
+            libmesh \
+            >/dev/null 2>&1
+
+	export FINS_USER_OPTIONS="-ksp_right_pc"
+	export libmesh_CPPFLAGS="-DOMPI_SKIP_MPICXX -DMPICH_SKIP_MPICXX"
+        export libmesh_LDFLAGS="-Wl,--no-warn-search-mismatch"
+        export LDFLAGS=${libmesh_LDFLAGS}
+
+        # Perl libraries for Darby's 'q'
+        [ -d /home/benkirk/perl/share/perl5 ] && export PERL5LIB=/home/benkirk/perl/share/perl5
+	;;
+
+    aerolab_hpc_*)
+	export HISTFILE=$HOME/.bash_history.l2
+        # module load anaconda             >/dev/null 2>&1
+        # module load -gcc -intel -pgi     >/dev/null 2>&1
+        # module load intel/18.0.3         >/dev/null 2>&1
+        # module load mpt/latest           >/dev/null 2>&1
+        module load \
+            -autotools +autotools/1.2 \
+            dplr/4.04.0 libmesh >/dev/null 2>&1
+
+        module use /software/x86_64/modules/aerolab-c7/MPI/gcc/4.8/mpt/2.15 >/dev/null 2>&1
+        module load mpi4py/3.0.1-python${PYTHON_VERSION} >/dev/null 2>&1
+
+        export CPPFLAGS="-DMPI_NO_CPPBIND"
+        export LDFLAGS="-Wl,--no-warn-search-mismatch"
+        #export CPPFLAGS="-DMPI_NO_CPPBIND"
+        #export LDFLAGS=${libmesh_LDFLAGS}
+        ;;
+
+    *)
+	echo "WARNING: Unknown AEROLAB_SYSTEM_CLASS: $AEROLAB_SYSTEM_CLASS"
+esac
+
+# # if (test -d $CODES/libmesh/$AEROLAB_SYSTEM_CLASS); then
+# #     export LIBMESH_ROOT=$CODES/libmesh/$AEROLAB_SYSTEM_CLASS
+# #     export LIBMESH_DIR=$LIBMESH_ROOT
+# # fi
+
+if (test -d $CODES/fins); then
+    export FINS_ROOT=$CODES/fins.trunk
+
+    if (test -f $FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING/lib/libgrvy.so); then
+	export GRVY_DIR=$FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING
+    fi
+
+    if (test -f $FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING/lib/libablation.so); then
+	export ABLATION_DIR=$FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING
+    fi
+
+    if (test -f $FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING/lib/libmasa.so); then
+	export MASA_DIR=$FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING
+    fi
+
+    if (test -f $FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING/lib/libchemay.so); then
+	export CHEMAY_DIR=$FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING
+    fi
+
+    if (test -f $FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING/lib/libradiation.so); then
+	export RADIATION_DIR=$FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING
+    fi
+    # if (test -f $FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING/lib/libgsi.so); then
+    #     export GSI_DIR=$FINS_ROOT/contrib/install/$AEROLAB_SYSTEM_CLASS-$MPI_ID_STRING-$COMPILER_ID_STRING
+    # fi
+
+fi
+# if (test -d $CODES/dplr); then
+#     export DPLR_HOME=$CODES/dplr
+# fi
+
+# if (test -d $CODES/fccht); then
+#     export FCCHT_ROOT=$CODES/fccht
+# fi
+
+export FINS_ROOT=$CODES/fins.trunk
+# export CHAR_ROOT=$CODES/char
+
+# Local Variables:
+# mode: shell-script
+# End:
