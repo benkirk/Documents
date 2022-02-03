@@ -1,0 +1,31 @@
+[user]
+        name = Benjamin S. Kirk
+        email = benjamin.kirk@nasa.gov
+
+[credential]
+        helper = cache --timeout=3600
+
+[color]
+       diff = auto
+       status = auto
+       branch = auto
+       interactive = auto
+       ui = true
+       pager = true
+
+[alias]
+        co = checkout
+        di = diff
+        st = status
+        ci = commit
+        stat = status
+        br = branch
+        lg = log --stat
+
+[branch "master"]
+  rebase = true
+
+[http]
+        sslVerify = false
+[push]
+        default = simple
