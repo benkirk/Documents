@@ -1,6 +1,10 @@
 ########################################################################
 # Common Environment Variables (Override if necessary)
 
+# Matlab-style history
+bind '"\e[A"':history-search-backward
+bind '"\e[B"':history-search-forward
+    
 #CDPATH=".:~:/nobackup/$USER"
 export EDITOR=emacs
 
