@@ -151,25 +151,7 @@ xsettitle() {
     builtin echo -n -e "\033]2;$1\007";
 }
 
-lustre3_terminal() {
-    gnome-terminal \
-        --tab -e "ssh root@192.52.98.30"  \
-        --tab -e "ssh root@192.52.98.31"  \
-        --tab -e "ssh root@192.52.98.32" \
-        --tab -e "ssh root@192.52.98.33" \
-        --tab -e "ssh root@192.52.98.34" \
-        --tab -e "ssh root@192.52.98.35" \
-        --tab -e "ssh root@192.52.98.36" \
-        --tab -e "ssh root@192.52.98.37" \
-        --tab -e "ssh root@192.52.98.38" \
-        --tab -e "ssh root@192.52.98.39" \
-        --tab -e "ssh root@192.52.98.40" \
-        --tab -e "ssh root@192.52.98.41" \
-        --tab -e "ssh root@192.52.98.42" \
-        --tab -e "ssh root@192.52.98.43" \
-        --tab -e "ssh root@192.52.98.44" \
-        --tab -e "ssh root@192.52.98.45"
-}
+
 
 restart_synergy() {
     psgkill synergys
