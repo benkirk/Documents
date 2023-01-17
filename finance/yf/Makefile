@@ -1,5 +1,5 @@
 all:
-	$(MAKE) etfs.py plots.py
+	$(MAKE) etfs.py plots.py data.py
 
 tsp_shareprices.xlsx: data.ipynb
 	rm -f data.py
@@ -7,8 +7,8 @@ tsp_shareprices.xlsx: data.ipynb
 	[ -f tsp_shareprices.xlsx ] && cp tsp_shareprices.xlsx ~/Downloads/
 
 %.py : %.ipynb Makefile
-	jupyter-3.7 nbconvert --to=notebook --clear-output $< >/dev/null
-	jupyter-3.7 nbconvert --to=python --execute $< >/dev/null
+	jupyter nbconvert --to=notebook --clear-output $< >/dev/null
+	jupyter nbconvert --to=python $< >/dev/null
 	chmod +x $@
 
 clean:

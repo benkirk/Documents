@@ -1,0 +1,18 @@
+# https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+# $ conda env create -f environment.yml && conda activate yfinance && jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
+
+name: yfinance
+channels:
+  - conda-forge
+dependencies:
+  - ipywidgets
+  - jupyterlab
+  - matplotlib
+  - openpyxl
+  - pandas
+  - pandas-datareader
+  - python=3.10
+  - requests-cache
+  - scipy
+  - seaborn
+  - yfinance
