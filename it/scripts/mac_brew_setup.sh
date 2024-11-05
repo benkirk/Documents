@@ -16,6 +16,7 @@ brew install --cask \
      slack \
      tigervnc-viewer \
      paraview \
+     microsoft-edge \
      adobe-acrobat-reader \
      google-drive \
      google-earth-pro \
@@ -28,7 +29,7 @@ brew install \
      autoconf automake libtool m4 \
      cmake cmake-docs \
      gawk gnu-sed \
-     git git-extras \
+     git git-extras gh \
      subversion \
      doxygen graphviz \
      clang-format \
@@ -73,6 +74,7 @@ brew install \
      dos2unix \
      wget \
      bash bash-completion \
+     tree \
     || exit 1
 
 # developer tools
