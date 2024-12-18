@@ -1,0 +1,13 @@
+name: scraping
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - beautifulsoup4
+  - jupyterlab
+  - numpy
+  - pandas
+  - python
+  - requests-cache
+  - tabulate
+prefix: /Users/benkirk/.conda/envs/scraping

@@ -1,0 +1,21 @@
+name: dask
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - dask
+  - humanfriendly
+  - jupyterlab
+  - make
+  - memory_profiler
+  - multiprocess
+  - numpy
+  - openpyxl
+  - pandas
+  - pip
+  - pyarrow
+  - python=3.12
+  - yaml
+  - nbclassic
+  - cachetools
+prefix: /Users/benkirk/.conda/envs/dask

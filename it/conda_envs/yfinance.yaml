@@ -1,0 +1,17 @@
+name: yfinance
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - openpyxl
+  - requests-cache
+  - jupyterlab
+  - pandas-datareader
+  - python=3.10
+  - ipywidgets
+  - yfinance
+  - seaborn
+  - scipy
+  - matplotlib
+  - pandas
+prefix: /Users/benkirk/.conda/envs/yfinance

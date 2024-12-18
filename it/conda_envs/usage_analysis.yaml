@@ -1,0 +1,16 @@
+name: usage_analysis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - humanfriendly
+  - make
+  - numpy
+  - pandas
+  - pip
+  - pyarrow
+  - python=3.12
+  - yaml
+  - memory_profiler
+  - openpyxl
+prefix: /Users/benkirk/.conda/envs/usage_analysis
